@@ -1,0 +1,1647 @@
+1>------ Rebuild All started: Project: tier0, Configuration: Release Win32 ------
+2>------ Rebuild All started: Project: mathlib, Configuration: Release Win32 ------
+3>------ Rebuild All started: Project: tier1, Configuration: Release Win32 ------
+4>------ Rebuild All started: Project: tier2, Configuration: Release Win32 ------
+3>Deleting intermediate and output files for project 'tier1', configuration 'Release|Win32'
+1>Deleting intermediate and output files for project 'tier0', configuration 'Release|Win32'
+2>Deleting intermediate and output files for project 'mathlib', configuration 'Release|Win32'
+5>------ Rebuild All started: Project: bitmap, Configuration: Release Win32 ------
+6>------ Rebuild All started: Project: vgui_surfacelib, Configuration: Release Win32 ------
+5>Deleting intermediate and output files for project 'bitmap', configuration 'Release|Win32'
+4>Deleting intermediate and output files for project 'tier2', configuration 'Release|Win32'
+7>------ Rebuild All started: Project: shaderlib, Configuration: Release Win32 ------
+6>Deleting intermediate and output files for project 'vgui_surfacelib', configuration 'Release|Win32'
+8>------ Rebuild All started: Project: hk_base, Configuration: Release Win32 ------
+7>Deleting intermediate and output files for project 'shaderlib', configuration 'Release|Win32'
+8>Deleting intermediate and output files for project 'hk_base', configuration 'Release|Win32'
+7>Performing Pre-Build Event...
+6>Performing Pre-Build Event...
+5>Performing Pre-Build Event...
+8>Compiling...
+8>base_types.cpp
+7>Compiling...
+6>Compiling...
+5>Compiling...
+7>BaseShader.cpp
+6>BitmapFont.cpp
+5>colorconversion.cpp
+2>Performing Pre-Build Event...
+4>Performing Pre-Build Event...
+3>Performing Pre-Build Event...
+1>Performing Pre-Build Event...
+4>Compiling...
+2>Compiling...
+3>Compiling...
+4>beamsegdraw.cpp
+2>3dnow.cpp
+3>bitbuf.cpp
+2>vmatrix.cpp
+2>vector.cpp
+4>vconfig.cpp
+2>ssenoise.cpp
+3>utlsymbol.cpp
+1>Compiling...
+7>shaderlib_cvar.cpp
+2>sseconst.cpp
+1>pch_tier0.cpp
+3>utlstring.cpp
+7>ShaderDLL.cpp
+2>sse.cpp
+3>utlbufferutil.cpp
+6>Win32Font.cpp
+7>Generating Code...
+2>sparse_convolution_noise.cpp
+8>Compiling...
+3>utlbuffer.cpp
+8>memory.cpp
+8>console.cpp
+2>simdvectormatrix.cpp
+3>uniqueid.cpp
+6>FontManager.cpp
+8>.\console.cpp(42) : warning C4996: 'vsprintf': This function or variable may be unsafe. Consider using vsprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+8>        C:\Program Files (x86)\Microsoft Visual Studio 8\VC\include\stdio.h(345) : see declaration of 'vsprintf'
+8>id_server.cpp
+8>string.cpp
+8>.\string\string.cpp(11) : warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+8>        C:\Program Files (x86)\Microsoft Visual Studio 8\VC\include\string.h(74) : see declaration of 'strcpy'
+8>stopwatch.cpp
+8>hash.cpp
+8>array.cpp
+2>randsse.cpp
+8>memory_util.cpp
+2>quantize.cpp
+6>FontEffects.cpp
+4>utlstreambuffer.cpp
+8>Generating Code...
+5>tgawriter.cpp
+6>FontAmalgam.cpp
+2>powsse.cpp
+3>tokenreader.cpp
+1>Compiling...
+2>polyhedron.cpp
+8>Creating library...
+4>util_init.cpp
+5>tgaloader.cpp
+1>win32consoleio.cpp
+6>Generating Code...
+4>tier2.cpp
+2>mathlib_base.cpp
+1>vprof.cpp
+3>tier1.cpp
+5>resample.cpp
+2>lightdesc.cpp
+1>vcrmode.cpp
+3>strtools.cpp
+1>tslist.cpp
+8>Performing Custom Build Step
+1>thread.cpp
+2>imagequant.cpp
+1>systeminformation.cpp
+4>soundutils.cpp
+2>IceKey.cpp
+1>security.cpp
+5>psd.cpp
+2>halton.cpp
+1>progressbar.cpp
+3>stringpool.cpp
+8>        1 arquivo(s) copiado(s).
+8>Build log was saved at "file://t:\gluon\src_main\ivp\havana\hk_tmp\win32\hk_base\release\BuildLog.htm"
+8>hk_base - 0 error(s), 2 warning(s)
+2>color_conversion.cpp
+3>rangecheckedvar.cpp
+5>imageformat.cpp
+2>bumpvects.cpp
+1>pme.cpp
+3>newbitbuf.cpp
+2>anorms.cpp
+4>riff.cpp
+2>Generating Code...
+1>platform.cpp
+3>NetAdr.cpp
+1>memvalidate.cpp
+1>memstd.cpp
+5>ImageByteSwap.cpp
+4>renderutils.cpp
+1>memdbg.cpp
+9>------ Rebuild All started: Project: hk_math, Configuration: Release Win32 ------
+9>Deleting intermediate and output files for project 'hk_math', configuration 'Release|Win32'
+1>mem_helpers.cpp
+1>mem.cpp
+1>fasttimer.cpp
+1>dbg.cpp
+1>cpu.cpp
+1>commandline.cpp
+4>p4helpers.cpp
+3>memstack.cpp
+1>assert_dialog.cpp
+9>Compiling...
+4>meshutils.cpp
+1>Generating Code...
+4>MaterialSystemUtil.cpp
+9>densematrix.cpp
+3>mempool.cpp
+4>map_utils.cpp
+3>lzss.cpp
+4>keybindings.cpp
+3>lzmaDecoder.cpp
+5>float_cube.cpp
+3>KeyValues.cpp
+4>fileutils.cpp
+5>float_bm_bilateral_filter.cpp
+9>Compiling...
+4>dmconnect.cpp
+9>lcp_solver.cpp
+5>float_bm4.cpp
+9>transform.cpp
+9>spatial_vector.cpp
+9>spatial_matrix.cpp
+9>rotation.cpp
+5>float_bm3.cpp
+9>plane.cpp
+3>interface.cpp
+4>defaultfilesystem.cpp
+2>Performing Pre-Link Event...
+5>float_bm2.cpp
+4>Generating Code...
+3>generichash.cpp
+9>odesolve.cpp
+9>matrix3.cpp
+9>math.cpp
+9>eulerangles.cpp
+9>densematrix_util.cpp
+9>vector3_util.cpp
+9>vector3.cpp
+9>quaternion_util.cpp
+9>quaternion.cpp
+9>gauss_elimination.cpp
+9>.\gauss_elimination\gauss_elimination.cpp(31) : warning C4244: 'initializing' : conversion from 'hk_double' to 'hk_gauss_real', possible loss of data
+9>.\gauss_elimination\gauss_elimination.cpp(37) : warning C4244: '=' : conversion from 'hk_double' to 'hk_gauss_real', possible loss of data
+3>Generating Code...
+9>incr_lu.cpp
+9>.\incr_lu\incr_lu.cpp(64) : warning C4244: 'initializing' : conversion from 'hk_double' to 'hk_incrlu_real', possible loss of data
+9>.\incr_lu\incr_lu.cpp(68) : warning C4244: 'initializing' : conversion from 'hk_double' to 'hk_incrlu_real', possible loss of data
+5>float_bm.cpp
+9>Generating Code...
+2>Creating library...
+5>Generating Code...
+1>Compiling...
+1>threadtools.cpp
+2>Build log was saved at "file://t:\gluon\src_main\mathlib\Release\BuildLog.htm"
+2>mathlib - 0 error(s), 0 warning(s)
+1>Compiling...
+1>PMELib.cpp
+10>------ Rebuild All started: Project: vtf, Configuration: Release Win32 ------
+10>Deleting intermediate and output files for project 'vtf', configuration 'Release|Win32'
+4>Performing Pre-Link Event...
+10>Performing Pre-Build Event...
+4>Creating library...
+10>Compiling...
+9>Creating library...
+10>convert_x360.cpp
+10>vtf.cpp
+9>Performing Custom Build Step
+1>Compiling...
+9>        1 arquivo(s) copiado(s).
+10>s3tc_decode.cpp
+1>minidump.cpp
+9>Build log was saved at "file://t:\gluon\src_main\ivp\havana\hk_tmp\win32\hk_math\release\BuildLog.htm"
+9>hk_math - 0 error(s), 4 warning(s)
+3>Compiling...
+3>diff.cpp
+11>------ Rebuild All started: Project: Jpeglib, Configuration: Release Win32 ------
+11>Deleting intermediate and output files for project 'Jpeglib', configuration 'Release|Win32'
+5>Performing Pre-Link Event...
+7>Performing Pre-Link Event...
+6>Performing Pre-Link Event...
+10>Generating Code...
+3>datamanager.cpp
+1>Compiling resources...
+3>convar.cpp
+3>commandbuffer.cpp
+11>Performing Pre-Build Event...
+6>Creating library...
+7>Creating library...
+5>Creating library...
+1>Performing Pre-Link Event...
+3>checksum_md5.cpp
+10>Performing Pre-Link Event...
+3>checksum_crc.cpp
+3>characterset.cpp
+4>Build log was saved at "file://t:\gluon\src_main\tier2\Release\BuildLog.htm"
+4>tier2 - 0 error(s), 0 warning(s)
+3>byteswap.cpp
+12>------ Rebuild All started: Project: tier3, Configuration: Release Win32 ------
+12>Deleting intermediate and output files for project 'tier3', configuration 'Release|Win32'
+10>Creating library...
+3>Generating Code...
+11>Compiling...
+1>Linking...
+12>Performing Pre-Build Event...
+7>Build log was saved at "file://t:\gluon\src_main\materialsystem\shaderlib\Release\BuildLog.htm"
+6>Build log was saved at "file://t:\gluon\src_main\vgui2\vgui_surfacelib\Release\BuildLog.htm"
+10>Build log was saved at "file://t:\gluon\src_main\vtf\Release\BuildLog.htm"
+5>Build log was saved at "file://t:\gluon\src_main\bitmap\Release\BuildLog.htm"
+6>vgui_surfacelib - 0 error(s), 0 warning(s)
+10>vtf - 0 error(s), 0 warning(s)
+5>bitmap - 0 error(s), 0 warning(s)
+7>shaderlib - 0 error(s), 0 warning(s)
+13>------ Skipped Rebuild All: Project: ivp_compactbuilder, Configuration: Release Win32 ------
+13>Project not selected to build for this solution configuration 
+14>------ Rebuild All started: Project: ivp_physics, Configuration: Release Win32 ------
+14>Deleting intermediate and output files for project 'ivp_physics', configuration 'Release|Win32'
+15>------ Rebuild All started: Project: havana_constraints, Configuration: Release Win32 ------
+15>Deleting intermediate and output files for project 'havana_constraints', configuration 'Release|Win32'
+16>------ Rebuild All started: Project: vgui_controls, Configuration: Release Win32 ------
+16>Deleting intermediate and output files for project 'vgui_controls', configuration 'Release|Win32'
+11>jcapimin.c
+17>------ Rebuild All started: Project: Bzip2, Configuration: Release Win32 ------
+17>Deleting intermediate and output files for project 'Bzip2', configuration 'Release|Win32'
+11>jutils.c
+11>jquant2.c
+11>jquant1.c
+11>jmemnobs.c
+11>jmemmgr.c
+3>Compiling...
+11>jidctred.c
+1>   Creating library ..\lib\public\tier0.lib and object ..\lib\public\tier0.exp
+11>jidctint.c
+11>jidctfst.c
+17>Performing Pre-Build Event...
+11>jidctflt.c
+15>Compiling...
+11>jfdctint.c
+11>jfdctfst.c
+3>processor_detect.cpp
+11>jfdctflt.c
+11>jerror.c
+15>constraint.cpp
+3>Performing Pre-Link Event...
+11>jdtrans.c
+11>jdsample.c
+17>Compiling...
+11>jdpostct.c
+11>jdphuff.c
+17>blocksort.c
+11>jdmerge.c
+3>Creating library...
+11>jdmaster.c
+17>randtable.c
+11>Generating Code...
+16>Performing Pre-Build Event...
+15>rigid_body_binary_effector.cpp
+17>huffman.c
+3>Build log was saved at "file://t:\gluon\src_main\tier1\Release\BuildLog.htm"
+3>tier1 - 0 error(s), 0 warning(s)
+15>rigid_body_core.cpp
+17>decompress.c
+16>Compiling...
+15>local_constraint_system.cpp
+17>crctable.c
+16>AnalogBar.cpp
+17>compress.c
+15>stiff_spring_constraint.cpp
+17>bzlib.c
+15>pulley_constraint.cpp
+16>WizardSubPanel.cpp
+15>prismatic_constraint.cpp
+17>bzip2.c
+11>Compiling...
+11>jdmarker.c
+11>jdmainct.c
+14>Compiling...
+11>jdinput.c
+11>jdhuff.c
+15>fixed_constraint.cpp
+11>jddctmgr.c
+14>cl : Command line warning D9035 : option 'Fr' has been deprecated and will be removed in a future release
+14>cl : Command line warning D9036 : use 'FR' instead of 'Fr'
+14>ivp_physic.cxx
+11>jdcolor.c
+16>WizardPanel.cpp
+11>jdcoefct.c
+11>jdatasrc.c
+11>jdatadst.c
+17>Generating Code...
+15>breakable_constraint.cpp
+11>jdapistd.c
+16>URLLabel.cpp
+14>..\ivp_intern\ivp_physic.cxx(25) : warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+14>        C:\Program Files (x86)\Microsoft Visual Studio 8\VC\include\stdio.h(234) : see declaration of 'fopen'
+11>jdapimin.c
+11>jctrans.c
+14>Compiling...
+11>jcsample.c
+11>jcprepct.c
+15>hinge_constraint.cpp
+11>jcphuff.c
+14>cl : Command line warning D9035 : option 'Fr' has been deprecated and will be removed in a future release
+14>cl : Command line warning D9036 : use 'FR' instead of 'Fr'
+14>ivp_3d_solver.cxx
+11>jcparam.c
+11>jcomapi.c
+15>hinge_bp_builder.cpp
+14>ivu_vhash.cxx
+16>TreeViewListControl.cpp
+11>jcmaster.c
+11>jcmarker.c
+14>ivu_vector.cxx
+14>ivu_types.cxx
+11>jcmainct.c
+14>ivu_string.cxx
+11>Generating Code...
+15>ragdoll_constraint_bp_builder.cpp
+14>..\ivp_utility\ivu_string.cxx(267) : warning C4996: 'vsprintf': This function or variable may be unsafe. Consider using vsprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+14>        C:\Program Files (x86)\Microsoft Visual Studio 8\VC\include\stdio.h(345) : see declaration of 'vsprintf'
+14>..\ivp_utility\ivu_string.cxx(287) : warning C4996: 'vsprintf': This function or variable may be unsafe. Consider using vsprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+14>        C:\Program Files (x86)\Microsoft Visual Studio 8\VC\include\stdio.h(345) : see declaration of 'vsprintf'
+14>..\ivp_utility\ivu_string.cxx(303) : warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+14>        C:\Program Files (x86)\Microsoft Visual Studio 8\VC\include\stdio.h(345) : see declaration of 'sprintf'
+14>..\ivp_utility\ivu_string.cxx(310) : warning C4996: 'vsprintf': This function or variable may be unsafe. Consider using vsprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+14>        C:\Program Files (x86)\Microsoft Visual Studio 8\VC\include\stdio.h(345) : see declaration of 'vsprintf'
+14>..\ivp_utility\ivu_string.cxx(326) : warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+14>        C:\Program Files (x86)\Microsoft Visual Studio 8\VC\include\stdio.h(345) : see declaration of 'sprintf'
+14>..\ivp_utility\ivu_string.cxx(333) : warning C4996: 'vsprintf': This function or variable may be unsafe. Consider using vsprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+14>        C:\Program Files (x86)\Microsoft Visual Studio 8\VC\include\stdio.h(345) : see declaration of 'vsprintf'
+14>..\ivp_utility\ivu_string.cxx(406) : warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+14>        C:\Program Files (x86)\Microsoft Visual Studio 8\VC\include\string.h(166) : see declaration of 'strtok'
+14>..\ivp_utility\ivu_string.cxx(448) : warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _stricmp. See online help for details.
+14>        C:\Program Files (x86)\Microsoft Visual Studio 8\VC\include\string.h(215) : see declaration of 'stricmp'
+14>ivu_quat.cxx
+15>ragdoll_constraint.cpp
+14>ivu_os_dep.cxx
+14>ivu_min_list.cxx
+16>TreeView.cpp
+14>ivu_min_hash.cxx
+14>ivu_memory.cxx
+14>ivu_linear.cxx
+15>limited_ball_socket_constraint.cpp
+14>ivu_hash.cxx
+14>ivu_geometry.cxx
+14>ivu_bigvector.cxx
+14>ivu_active_value.cxx
+14>ivp_surman_polygon.cxx
+15>ball_socket_constraint.cpp
+16>ToolWindow.cpp
+14>ivp_surman_grid.cxx
+14>ivp_gridbuild_array.cxx
+14>ivp_compact_surface.cxx
+14>ivp_templates.cxx
+14>.\ivp_templates.cxx(57) : warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+14>        C:\Program Files (x86)\Microsoft Visual Studio 8\VC\include\string.h(157) : see declaration of 'strncpy'
+16>Tooltip.cpp
+15>Generating Code...
+17>Performing Pre-Link Event...
+14>Generating Code...
+17>Creating library...
+16>ToggleButton.cpp
+11>Compiling...
+11>jcinit.c
+11>jchuff.c
+17>Build log was saved at "file://t:\gluon\src_main\utils\bzip2\Release\BuildLog.htm"
+17>Bzip2 - 0 error(s), 0 warning(s)
+11>jcdctmgr.c
+11>jccolor.c
+11>jccoefct.c
+11>jcapistd.c
+16>TextImage.cpp
+11>Generating Code...
+16>TextEntry.cpp
+12>Compiling...
+11>Performing Pre-Link Event...
+1>Publishing to ..\..\game\bin
+12>choreoutils.cpp
+14>Compiling...
+14>ivp_surface_manager.cxx
+1>Já existe uma subpasta ou um arquivo ..\..\game\bin.
+14>ivp_stat_manager_cback_con.cxx
+14>ivp_performancecounter.cxx
+1>        1 arquivo(s) copiado(s).
+16>subrectimage.cpp
+1>        1 arquivo(s) copiado(s).
+14>ivp_material.cxx
+16>Splitter.cpp
+14>ivp_liquid_surface_descript.cxx
+1>        1 arquivo(s) copiado(s).
+14>ivp_cache_object.cxx
+16>Slider.cpp
+12>tier3.cpp
+14>ivp_betterstatisticsmanager.cxx
+14>ivp_betterdebugmanager.cxx
+14>.\ivp_betterdebugmanager.cxx(51) : warning C4996: 'vsprintf': This function or variable may be unsafe. Consider using vsprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+14>        C:\Program Files (x86)\Microsoft Visual Studio 8\VC\include\stdio.h(345) : see declaration of 'vsprintf'
+14>ivp_anomaly_manager.cxx
+14>ivp_time.cxx
+1>Build log was saved at "file://t:\gluon\src_main\tier0\Release\BuildLog.htm"
+1>tier0 - 0 error(s), 0 warning(s)
+16>SectionedListPanel.cpp
+18>------ Rebuild All started: Project: vstdlib, Configuration: Release Win32 ------
+18>Deleting intermediate and output files for project 'vstdlib', configuration 'Release|Win32'
+12>studiohdrstub.cpp
+16>ScrollBarSlider.cpp
+18>Performing Pre-Build Event...
+14>ivp_solver_core_reaction.cxx
+14>ivp_sim_unit.cxx
+14>ivp_polygon.cxx
+14>ivp_physic_private.cxx
+16>ScrollBar.cpp
+14>ivp_object_attach.cxx
+12>scenetokenprocessor.cpp
+18>Compiling...
+14>..\ivp_intern\ivp_object_attach.cxx(121) : warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+14>        C:\Program Files (x86)\Microsoft Visual Studio 8\VC\include\string.h(157) : see declaration of 'strncpy'
+14>ivp_object.cxx
+18>vcover.cpp
+14>..\ivp_intern\ivp_object.cxx(43) : warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+14>        C:\Program Files (x86)\Microsoft Visual Studio 8\VC\include\string.h(157) : see declaration of 'strncpy'
+14>..\ivp_intern\ivp_object.cxx(352) : warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+14>        C:\Program Files (x86)\Microsoft Visual Studio 8\VC\include\string.h(157) : see declaration of 'strncpy'
+14>ivp_mindist_friction.cxx
+16>ScrollableEditablePanel.cpp
+12>Generating Code...
+14>ivp_merge_core.cxx
+14>ivp_impact.cxx
+18>random.cpp
+15>Creating library...
+16>savedocumentquery.cpp
+18>processutils.cpp
+14>ivp_i_object_vhash.cxx
+11>Creating library...
+12>Performing Pre-Link Event...
+14>Generating Code...
+15>Creating browse information file...
+12>Creating library...
+16>RotatingProgressBar.cpp
+18>memoverride.cpp
+11>Build log was saved at "file://t:\gluon\src_main\utils\jpeglib\Release\BuildLog.htm"
+11>Jpeglib - 0 error(s), 0 warning(s)
+16>Generating Code...
+12>Build log was saved at "file://t:\gluon\src_main\tier3\Release\BuildLog.htm"
+12>tier3 - 0 error(s), 0 warning(s)
+18>KeyValuesSystem.cpp
+15>Microsoft Browse Information Maintenance Utility Version 8.00.50727
+15>Copyright (C) Microsoft Corporation. All rights reserved.
+15>Performing Custom Build Step
+18>jobthread.cpp
+15>        1 arquivo(s) copiado(s).
+14>Compiling...
+14>ivp_i_friction_hash.cxx
+14>ivp_hull_manager.cxx
+15>Build log was saved at "file://t:\gluon\src_main\ivp\obj\win32_release\havana_constraints\BuildLog.htm"
+14>ivp_great_matrix.cxx
+15>havana_constraints - 0 error(s), 0 warning(s)
+14>ivp_friction_gaps.cxx
+14>ivp_friction.cxx
+14>ivp_environment.cxx
+18>cvar.cpp
+14>ivp_core.cxx
+14>ivp_controller_phantom.cxx
+14>ivp_calc_next_psi_solver.cxx
+18>Generating Code...
+14>ivp_ball.cxx
+14>ivp_template_constraint.cxx
+14>ivp_multidimensional_interp.cxx
+14>ivp_forcefield.cxx
+14>ivp_controller_world_frict.cxx
+14>ivp_controller_stiff_spring.cxx
+14>ivp_controller_raycast_car.cxx
+14>ivp_controller_motion.cxx
+14>ivp_controller_floating.cxx
+14>ivp_controller_buoyancy.cxx
+14>ivp_controller_airboat.cpp
+14>Generating Code...
+18>Performing Pre-Link Event...
+18>Linking...
+18>   Creating library ..\lib\public\vstdlib.lib and object ..\lib\public\vstdlib.exp
+16>Compiling...
+16>RichText.cpp
+18>Publishing to ..\..\game\bin
+18>Já existe uma subpasta ou um arquivo ..\..\game\bin.
+18>        1 arquivo(s) copiado(s).
+18>        1 arquivo(s) copiado(s).
+16>RadioButton.cpp
+18>        1 arquivo(s) copiado(s).
+18>Build log was saved at "file://t:\gluon\src_main\vstdlib\Release\BuildLog.htm"
+18>vstdlib - 0 error(s), 0 warning(s)
+16>QueryBox.cpp
+16>PropertySheet.cpp
+19>------ Rebuild All started: Project: Stdshader_dx7, Configuration: Release Win32 ------
+20>------ Rebuild All started: Project: vgui2, Configuration: Release Win32 ------
+19>Deleting intermediate and output files for project 'Stdshader_dx7', configuration 'Release|Win32'
+21>------ Rebuild All started: Project: StudioRender, Configuration: Release Win32 ------
+22>------ Rebuild All started: Project: bugreporter_filequeue, Configuration: Release Win32 ------
+22>Deleting intermediate and output files for project 'bugreporter_filequeue', configuration 'Release|Win32'
+21>Deleting intermediate and output files for project 'StudioRender', configuration 'Release|Win32'
+20>Deleting intermediate and output files for project 'vgui2', configuration 'Release|Win32'
+23>------ Rebuild All started: Project: Bugreporter_text, Configuration: Release Win32 ------
+23>Deleting intermediate and output files for project 'Bugreporter_text', configuration 'Release|Win32'
+24>------ Rebuild All started: Project: stdshader_dbg, Configuration: Release Win32 ------
+24>Deleting intermediate and output files for project 'stdshader_dbg', configuration 'Release|Win32'
+16>PropertyPage.cpp
+14>Compiling...
+14>ivp_constraint_local.cxx
+16>PropertyDialog.cpp
+14>ivp_constraint_fixed_keyed.cxx
+14>ivp_constraint_car.cxx
+16>ProgressBox.cpp
+14>ivp_constraint.cxx
+22>Performing Pre-Build Event...
+14>ivp_car_system.cxx
+23>Performing Pre-Build Event...
+14>ivp_buoyancy_solver.cxx
+16>ProgressBar.cpp
+14>ivp_actuator_spring.cxx
+14>ivp_actuator.cxx
+19>Performing Pre-Build Event...
+22>Compiling...
+23>Compiling...
+21>Performing Pre-Build Event...
+14>ivp_ray_solver.cxx
+16>perforcefilelistframe.cpp
+24>Performing Pre-Build Event...
+14>ivp_range_manager.cxx
+14>ivp_oo_watcher.cxx
+14>ivp_mindist_recursive.cxx
+22>bugreporter.cpp
+23>bugreporter.cpp
+20>Performing Pre-Build Event...
+14>ivp_mindist_minimize.cxx
+14>ivp_mindist_mcases.cxx
+14>ivp_mindist_event.cxx
+19>Compiling...
+14>ivp_mindist_debug.cxx
+16>PerforceFileList.cpp
+21>Compiling...
+14>ivp_mindist.cxx
+24>Compiling...
+19>shader_dll_verify.cpp
+21>studiorendercontext.cpp
+14>ivp_i_collision_vhash.cxx
+20>Compiling...
+14>ivp_compact_ledge_solver.cxx
+24>shader_dll_verify.cpp
+14>ivp_compact_ledge.cxx
+20>VPanelWrapper.cpp
+14>Generating Code...
+16>PerforceFileExplorer.cpp
+19>checksum_md5.cpp
+20>VPanel.cpp
+24>memoverride.cpp
+16>PanelListPanel.cpp
+19>checksum_crc.cpp
+19>vortwarp_dx7.cpp
+23>Compiling...
+22>Compiling...
+20>vgui_key_translation.cpp
+16>Panel.cpp
+23>memoverride.cpp
+22>memoverride.cpp
+21>studiorender.cpp
+24>fillrate_dx6.cpp
+19>vertexlitgeneric_dx7.cpp
+16>MessageDialog.cpp
+21>r_studiolight.cpp
+20>vgui_internal.cpp
+24>fillrate.cpp
+19>shatteredglass_dx7.cpp
+23>Linking...
+22>Linking...
+16>MessageBox.cpp
+20>vgui.cpp
+22>   Creating library .\Release/bugreporter_filequeue.lib and object .\Release/bugreporter_filequeue.exp
+23>   Creating library .\Release/bugreporter_text.lib and object .\Release/bugreporter_text.exp
+19>memoverride.cpp
+16>MenuItem.cpp
+14>Compiling...
+24>debugtangentspace.cpp
+14>ivp_collision_filter.cxx
+14>ivp_coll_del_root_mindist.cxx
+14>ivp_clustering_visualizer.cxx
+20>UnicodeFileHelpers.cpp
+16>MenuButton.cpp
+19>filmgrain_dx7.cpp
+21>r_studiogettriangles.cpp
+20>System.cpp
+16>MenuBar.cpp
+14>ivp_clustering_visual_hash.cxx
+14>ivp_clustering_lrange_hash.cxx
+24>debugnormalmap.cpp
+23>Publishing to ..\..\..\game\bin
+14>ivp_clustering_longrange.cxx
+22>Publishing to ..\..\..\game\bin
+23>Já existe uma subpasta ou um arquivo ..\..\..\game\bin.
+16>Menu.cpp
+21>r_studioflex.cpp
+19>filmdust_dx7.cpp
+22>Já existe uma subpasta ou um arquivo ..\..\..\game\bin.
+14>Generating Code...
+16>ListViewPanel.cpp
+19>core_dx7.cpp
+24>debugluxel.cpp
+23>        1 arquivo(s) copiado(s).
+22>        1 arquivo(s) copiado(s).
+21>r_studiodraw.cpp
+20>Surface.cpp
+24>DebugDrawEnvmapMask.cpp
+23>        1 arquivo(s) copiado(s).
+16>Generating Code...
+22>        1 arquivo(s) copiado(s).
+21>r_studiodecal.cpp
+21>r_studio.cpp
+24>debugdepth.cpp
+19>Generating Code...
+23>        1 arquivo(s) copiado(s).
+20>Scheme.cpp
+14>Creating library...
+22>        1 arquivo(s) copiado(s).
+23>Build log was saved at "file://t:\gluon\src_main\utils\bugreporter_text\Release\BuildLog.htm"
+23>Bugreporter_text - 0 error(s), 0 warning(s)
+21>memoverride.cpp
+24>BaseVSShader.cpp
+22>Build log was saved at "file://t:\gluon\src_main\utils\bugreporter_filequeue\Release\BuildLog.htm"
+22>bugreporter_filequeue - 0 error(s), 0 warning(s)
+25>------ Rebuild All started: Project: stdshader_dx8, Configuration: Release Win32 ------
+25>Deleting intermediate and output files for project 'stdshader_dx8', configuration 'Release|Win32'
+20>MessageListener.cpp
+20>memoverride.cpp
+26>------ Rebuild All started: Project: stdshader_dx9, Configuration: Release Win32 ------
+26>Deleting intermediate and output files for project 'stdshader_dx9', configuration 'Release|Win32'
+21>flexrenderdata.cpp
+20>MemoryBitmap.cpp
+14>Creating browse information file...
+21>Generating Code...
+20>LocalizedStringTable.cpp
+24>Generating Code...
+19>Linking...
+20>InputWin32.cpp
+25>Performing Pre-Build Event...
+19>   Creating library Release_dx7/stdshader_dx7.lib and object Release_dx7/stdshader_dx7.exp
+26>Performing Pre-Build Event...
+24>Linking...
+25>Compiling...
+25>shader_dll_verify.cpp
+24>   Creating library Release_dbg/stdshader_dbg.lib and object Release_dbg/stdshader_dbg.exp
+26>Compiling...
+20>htmlwindow.cpp
+19>Publishing to ..\..\..\game\bin
+26>shader_dll_verify.cpp
+19>Já existe uma subpasta ou um arquivo ..\..\..\game\bin.
+19>        1 arquivo(s) copiado(s).
+25>yuv.cpp
+26>checksum_md5.cpp
+26>checksum_crc.cpp
+19>        1 arquivo(s) copiado(s).
+26>writez_dx9.cpp
+24>Publishing to ..\..\..\game\bin
+20>filesystem_init.cpp
+24>Já existe uma subpasta ou um arquivo ..\..\..\game\bin.
+25>writez_dx8.cpp
+19>        1 arquivo(s) copiado(s).
+24>        1 arquivo(s) copiado(s).
+26>writestencil_dx9.cpp
+24>        1 arquivo(s) copiado(s).
+20>filesystem_helpers.cpp
+25>writestencil_dx8.cpp
+19>Build log was saved at "file://t:\gluon\src_main\materialsystem\stdshaders\Release_dx7\BuildLog.htm"
+19>Stdshader_dx7 - 0 error(s), 0 warning(s)
+20>fileimage.cpp
+27>------ Rebuild All started: Project: MaterialSystem, Configuration: Release Win32 ------
+27>Deleting intermediate and output files for project 'MaterialSystem', configuration 'Release|Win32'
+26>worldvertextransition_dx8_helper.cpp
+25>worldvertextransition_dx8_helper.cpp
+24>        1 arquivo(s) copiado(s).
+20>Border.cpp
+26>worldvertextransition.cpp
+25>WorldVertexTransition_dx8.cpp
+24>Build log was saved at "file://t:\gluon\src_main\materialsystem\stdshaders\Release_dbg\BuildLog.htm"
+24>stdshader_dbg - 0 error(s), 0 warning(s)
+20>Bitmap.cpp
+26>worldvertexalpha.cpp
+26>worldtwotextureblend.cpp
+25>worldvertexalpha_dx8.cpp
+20>Generating Code...
+28>------ Rebuild All started: Project: SoundEmitterSystem, Configuration: Release Win32 ------
+28>Deleting intermediate and output files for project 'SoundEmitterSystem', configuration 'Release|Win32'
+27>Performing Pre-Build Event...
+26>wireframe_dx9.cpp
+28>Performing Pre-Build Event...
+25>worldtwotextureblend_dx8.cpp
+14>Microsoft Browse Information Maintenance Utility Version 8.00.50727
+14>Copyright (C) Microsoft Corporation. All rights reserved.
+14>Performing Custom Build Step
+25>wireframe_dx8.cpp
+26>windowimposter_dx90.cpp
+25>windowimposter_dx80.cpp
+16>Compiling...
+16>ListPanel.cpp
+28>Compiling...
+14>        1 arquivo(s) copiado(s).
+27>Compiling...
+28>SoundParametersInternal.cpp
+27>pch_materialsystem.cpp
+16>Label.cpp
+25>water_dx81.cpp
+26>water.cpp
+14>Build log was saved at "file://t:\gluon\src_main\ivp\obj\win32_release\ivp_physics\BuildLog.htm"
+14>ivp_physics - 0 error(s), 18 warning(s)
+28>soundemittersystembase.cpp
+16>KeyRepeat.cpp
+29>------ Rebuild All started: Project: SceneFileCache, Configuration: Release Win32 ------
+29>Deleting intermediate and output files for project 'SceneFileCache', configuration 'Release|Win32'
+25>water_dx80.cpp
+26>vortwarp_dx9.cpp
+28>memoverride.cpp
+29>Performing Pre-Build Event...
+25>vortwarp_dx8.cpp
+26>volume_clouds_helper.cpp
+28>interval.cpp
+25>vertexlitgeneric_dx8.cpp
+16>KeyBoardEditorDialog.cpp
+28>Generating Code...
+29>Compiling...
+29>SceneFileCache.cpp
+16>KeyBindingHelpDialog.cpp
+26>volume_clouds.cpp
+16>InputDialog.cpp
+27>Compiling...
+27>wireframe.cpp
+16>ImagePanel.cpp
+26>vertexlitgeneric_dx9_helper.cpp
+25>unlittwotexture_dx8.cpp
+28>Linking...
+16>ImageList.cpp
+29>memoverride.cpp
+28>   Creating library .\Release/soundemittersystem.lib and object .\Release/soundemittersystem.exp
+25>unlitgeneric_dx8.cpp
+26>vertexlitgeneric_dx9.cpp
+20>Linking...
+21>Linking...
+27>texturemanager.cpp
+16>Image.cpp
+21>   Creating library .\Release/studiorender.lib and object .\Release/studiorender.exp
+28>Publishing to ..\..\game\bin
+28>Já existe uma subpasta ou um arquivo ..\..\game\bin.
+29>Generating Code...
+28>        1 arquivo(s) copiado(s).
+28>        1 arquivo(s) copiado(s).
+28>        1 arquivo(s) copiado(s).
+29>Linking...
+16>HTML.cpp
+25>teeth_dx8.cpp
+26>unlittwotexture_dx9.cpp
+29>   Creating library .\Release/scenefilecache.lib and object .\Release/scenefilecache.exp
+28>Build log was saved at "file://t:\gluon\src_main\soundemittersystem\Release\BuildLog.htm"
+28>SoundEmitterSystem - 0 error(s), 0 warning(s)
+21>Publishing to ..\..\game\bin
+16>GraphPanel.cpp
+21>Já existe uma subpasta ou um arquivo ..\..\game\bin.
+25>spritecard.cpp
+26>unlitgeneric_dx9.cpp
+16>Frame.cpp
+30>------ Rebuild All started: Project: inputsystem, Configuration: Release Win32 ------
+30>Deleting intermediate and output files for project 'inputsystem', configuration 'Release|Win32'
+29>Publishing to ..\..\game\bin
+21>        1 arquivo(s) copiado(s).
+20>   Creating library .\Release/vgui2.lib and object .\Release/vgui2.exp
+21>        1 arquivo(s) copiado(s).
+29>Já existe uma subpasta ou um arquivo ..\..\game\bin.
+26>TreeLeaf.cpp
+16>FocusNavGroup.cpp
+27>shadersystem.cpp
+29>        1 arquivo(s) copiado(s).
+21>        1 arquivo(s) copiado(s).
+30>Performing Pre-Build Event...
+29>        1 arquivo(s) copiado(s).
+25>sprite.cpp
+29>        1 arquivo(s) copiado(s).
+16>filesystem_helpers.cpp
+21>Build log was saved at "file://t:\gluon\src_main\studiorender\Release\BuildLog.htm"
+21>StudioRender - 0 error(s), 0 warning(s)
+26>Generating Code...
+29>Build log was saved at "file://t:\gluon\src_main\scenefilecache\Release\BuildLog.htm"
+29>SceneFileCache - 0 error(s), 0 warning(s)
+31>------ Rebuild All started: Project: datacache, Configuration: Release Win32 ------
+31>Deleting intermediate and output files for project 'datacache', configuration 'Release|Win32'
+27>occlusionquerymgr.cpp
+25>shatteredglass_dx8.cpp
+30>Compiling...
+30>xcontroller.cpp
+31>Performing Pre-Build Event...
+16>FileOpenStateMachine.cpp
+32>------ Rebuild All started: Project: vphysics, Configuration: Release Win32 ------
+32>Deleting intermediate and output files for project 'vphysics', configuration 'Release|Win32'
+16>FileOpenDialog.cpp
+27>morph.cpp
+32>Compiling...
+31>Compiling...
+31>studiobyteswap.cpp
+32>vphysics_saverestore.cpp
+25>Generating Code...
+30>memoverride.cpp
+16>ExpandButton.cpp
+27>memoverride.cpp
+20>Publishing to ..\..\..\game\bin
+32>t:\gluon\src_main\public\mathlib/vector4d.h(22) : fatal error C1083: Cannot open include file: 'basetypes.h': No such file or directory
+16>EditablePanel.cpp
+20>Já existe uma subpasta ou um arquivo ..\..\..\game\bin.
+30>key_translation.cpp
+31>studio_virtualmodel.cpp
+32>vcollide_parse.cpp
+20>        1 arquivo(s) copiado(s).
+27>materialsystem_global.cpp
+20>        1 arquivo(s) copiado(s).
+32>t:\gluon\src_main\public\mathlib/vector4d.h(22) : fatal error C1083: Cannot open include file: 'basetypes.h': No such file or directory
+16>Divider.cpp
+27>mat_stub.cpp
+16>DirectorySelectDialog.cpp
+31>studio.cpp
+30>joystick.cpp
+32>utlsymbol.cpp
+32>c1xx : fatal error C1083: Cannot open source file: '..\public\utlsymbol.cpp': No such file or directory
+20>        1 arquivo(s) copiado(s).
+31>memoverride.cpp
+32>trace.cpp
+32>t:\gluon\src_main\vphysics\convert.h(12) : fatal error C1083: Cannot open include file: 'vector.h': No such file or directory
+27>imagepacker.cpp
+16>Generating Code...
+20>Build log was saved at "file://t:\gluon\src_main\vgui2\src\Release\BuildLog.htm"
+20>vgui2 - 0 error(s), 0 warning(s)
+32>physics_vehicle.cpp
+31>mdlcache.cpp
+27>filesystem_helpers.cpp
+30>inputsystem.cpp
+32>t:\gluon\src_main\vphysics\convert.h(12) : fatal error C1083: Cannot open include file: 'vector.h': No such file or directory
+27>ctexture.cpp
+33>------ Rebuild All started: Project: shaderapidx10, Configuration: Release Win32 ------
+33>Deleting intermediate and output files for project 'shaderapidx10', configuration 'Release|Win32'
+32>physics_spring.cpp
+31>datacache.cpp
+26>Compiling...
+26>teeth.cpp
+32>t:\gluon\src_main\public\mathlib/vector4d.h(22) : fatal error C1083: Cannot open include file: 'basetypes.h': No such file or directory
+32>physics_shadow.cpp
+27>colorspace.cpp
+32>t:\gluon\src_main\public\mathlib/vector4d.h(22) : fatal error C1083: Cannot open include file: 'basetypes.h': No such file or directory
+30>Generating Code...
+31>Generating Code...
+32>physics_object.cpp
+26>spritecard.cpp
+27>cmatnullrendercontext.cpp
+32>t:\gluon\src_main\public\mathlib/vector4d.h(22) : fatal error C1083: Cannot open include file: 'basetypes.h': No such file or directory
+26>sprite_dx9.cpp
+33>Performing Pre-Build Event...
+32>physics_motioncontroller.cpp
+25>Compiling...
+25>shadowmodel_dx8.cpp
+32>.\physics_motioncontroller.cpp(22) : fatal error C1083: Cannot open include file: 'utlvector.h': No such file or directory
+32>physics_material.cpp
+30>Linking...
+32>t:\gluon\src_main\public\mathlib/vector4d.h(22) : fatal error C1083: Cannot open include file: 'basetypes.h': No such file or directory
+30>   Creating library .\Release/inputsystem.lib and object .\Release/inputsystem.exp
+27>cmaterialvar.cpp
+33>Compiling...
+32>physics_fluid.cpp
+26>sky_hdr_dx9.cpp
+25>shadowbuild_dx8.cpp
+33>wmi.cpp
+32>t:\gluon\src_main\public\mathlib/vector4d.h(22) : fatal error C1083: Cannot open include file: 'basetypes.h': No such file or directory
+25>shadow_dx8.cpp
+27>CMaterialSubRect.cpp
+32>physics_environment.cpp
+26>sky_dx9.cpp
+26>skin_dx9_helper.cpp
+32>t:\gluon\src_main\public\mathlib/vector4d.h(22) : fatal error C1083: Cannot open include file: 'basetypes.h': No such file or directory
+25>screenspace_general_dx8.cpp
+27>cmaterial_queuefriendly.cpp
+30>Publishing to ..\..\game\bin
+32>physics_controller_raycast_vehicle.cpp
+32>t:\gluon\src_main\vphysics\physics_controller_raycast_vehicle.h(13) : fatal error C1083: Cannot open include file: 'vector.h': No such file or directory
+32>physics_constraint.cpp
+30>Já existe uma subpasta ou um arquivo ..\..\game\bin.
+30>        1 arquivo(s) copiado(s).
+26>showz.cpp
+32>t:\gluon\src_main\public\mathlib/vector4d.h(22) : fatal error C1083: Cannot open include file: 'basetypes.h': No such file or directory
+27>cmaterial.cpp
+25>refract_dx80.cpp
+30>        1 arquivo(s) copiado(s).
+32>physics_collide.cpp
+32>.\physics_collide.cpp(2) : fatal error C1083: Cannot open include file: 'interface.h': No such file or directory
+32>physics_airboat.cpp
+30>        1 arquivo(s) copiado(s).
+26>shatteredglass.cpp
+25>predator.cpp
+27>ccolorcorrection.cpp
+32>t:\gluon\src_main\public\mathlib/vector4d.h(22) : fatal error C1083: Cannot open include file: 'basetypes.h': No such file or directory
+33>vertexshaderdx8.cpp
+30>Build log was saved at "file://t:\gluon\src_main\inputsystem\Release\BuildLog.htm"
+30>inputsystem - 0 error(s), 0 warning(s)
+34>------ Rebuild All started: Project: shaderapidx9, Configuration: Release Win32 ------
+34>Deleting intermediate and output files for project 'shaderapidx9', configuration 'Release|Win32'
+16>Compiling...
+16>controls.cpp
+32>memoverride.cpp
+26>shadowmodel_dx9.cpp
+25>portalstaticoverlay_dx80.cpp
+16>ControllerMap.cpp
+34>Performing Pre-Build Event...
+27>Generating Code...
+26>shadowbuild_dx9.cpp
+25>portal_refract_dx8_helper.cpp
+16>consoledialog.cpp
+32>Mathlib.cpp
+32>c1xx : fatal error C1083: Cannot open source file: '..\public\Mathlib.cpp': No such file or directory
+26>shadow.cpp
+34>Compiling...
+25>portal_refract_dx8.cpp
+32>main.cpp
+34>wmi.cpp
+32>.\main.cpp(7) : fatal error C1083: Cannot open include file: 'mathlib.h': No such file or directory
+16>ComboBox.cpp
+25>portal_dx80.cpp
+32>interface.cpp
+26>sfm_integercombine.cpp
+32>c1xx : fatal error C1083: Cannot open source file: '..\public\interface.cpp': No such file or directory
+32>Generating Code...
+32>Compiling...
+32>filesystem_helpers.cpp
+32>..\public\filesystem_helpers.cpp(9) : fatal error C1083: Cannot open include file: 'characterset.h': No such file or directory
+16>CircularProgressBar.cpp
+25>particlesphere_dx8.cpp
+32>convert.cpp
+33>vertexdecl.cpp
+32>t:\gluon\src_main\vphysics\convert.h(12) : fatal error C1083: Cannot open include file: 'vector.h': No such file or directory
+34>vertexshaderdx8.cpp
+26>sfm_downsample.cpp
+32>characterset.cpp
+32>c1xx : fatal error C1083: Cannot open source file: '..\public\characterset.cpp': No such file or directory
+32>Generating Code...
+32>Creating browse information file...
+31>Linking...
+16>CheckButtonList.cpp
+32>Microsoft Browse Information Maintenance Utility Version 8.00.50727
+32>Copyright (C) Microsoft Corporation. All rights reserved.
+32>BSCMAKE: error BK1506 : cannot open file '.\release\convert.sbr': No such file or directory
+32>Build log was saved at "file://t:\gluon\src_main\vphysics\Release\BuildLog.htm"
+32>vphysics - 23 error(s), 0 warning(s)
+26>sfm_blurfiltery.cpp
+25>overlay_fit.cpp
+31>   Creating library .\Release/datacache.lib and object .\Release/datacache.exp
+33>TransitionTable.cpp
+16>CheckButton.cpp
+25>occlusion_dx8.cpp
+26>sfm_blurfilterx.cpp
+16>Button.cpp
+35>------ Rebuild All started: Project: Valve_avi, Configuration: Release Win32 ------
+35>Deleting intermediate and output files for project 'Valve_avi', configuration 'Release|Win32'
+34>vertexdecl.cpp
+26>screenspace_general.cpp
+25>MonitorScreen_dx8.cpp
+16>BuildModeDialog.cpp
+31>Publishing to ..\..\game\bin
+33>texturedx8.cpp
+31>Já existe uma subpasta ou um arquivo ..\..\game\bin.
+31>        1 arquivo(s) copiado(s).
+25>modulate_dx8.cpp
+26>sample4x4_blend.cpp
+35>Performing Pre-Build Event...
+31>        1 arquivo(s) copiado(s).
+16>BuildGroup.cpp
+25>memoverride.cpp
+34>TransitionTable.cpp
+26>sample4x4.cpp
+16>BuildFactoryHelper.cpp
+31>        1 arquivo(s) copiado(s).
+31>Build log was saved at "file://t:\gluon\src_main\datacache\Release\BuildLog.htm"
+31>datacache - 0 error(s), 0 warning(s)
+35>Compiling...
+16>BitmapImagePanel.cpp
+35>bink.cpp
+26>refract_dx9_helper.cpp
+25>lightmappedgeneric_dx8.cpp
+33>shadershadowdx8.cpp
+16>AnimationController.cpp
+25>lightmappedgeneric_decal.cpp
+26>refract.cpp
+34>texturedx8.cpp
+35>avi.cpp
+36>------ Rebuild All started: Project: Bugreporter, Configuration: Release Win32 ------
+36>Deleting intermediate and output files for project 'Bugreporter', configuration 'Release|Win32'
+27>Compiling...
+16>AnimatingImagePanel.cpp
+36>Performing Pre-Build Event...
+25>jellyfish.cpp
+27>cmatrendercontext.cpp
+26>Generating Code...
+16>Generating Code...
+25>introscreenspaceeffect_dx80.cpp
+33>shaderdevicedx8.cpp
+34>shadershadowdx8.cpp
+27>cmatqueuedrendercontext.cpp
+36>Compiling...
+35>Generating Code...
+36>bugreporter.cpp
+25>Generating Code...
+27>cmatlightmaps.cpp
+35>Compiling...
+35>memoverride.cpp
+33>shaderdevicebase.cpp
+34>shaderdevicedx8.cpp
+27>cmaterialsystem.cpp
+36>Compiling...
+27>cmaterialdict.cpp
+35>Linking...
+33>shaderapidx8.cpp
+36>memoverride.cpp
+34>shaderdevicebase.cpp
+35>   Creating library .\Release/valve_avi.lib and object .\Release/valve_avi.exp
+27>Generating Code...
+34>shaderapidx8.cpp
+33>shaderapibase.cpp
+34>shaderapibase.cpp
+36>Linking...
+26>Compiling...
+26>portalstaticoverlay.cpp
+35>Publishing to ..\..\game\bin
+35>Já existe uma subpasta ou um arquivo ..\..\game\bin.
+33>recording.cpp
+34>recording.cpp
+36>   Creating library .\Release/bugreporter.lib and object .\Release/bugreporter.exp
+26>portal_refract_helper.cpp
+35>        1 arquivo(s) copiado(s).
+16>Performing Pre-Link Event...
+35>        1 arquivo(s) copiado(s).
+16>Creating library...
+35>        1 arquivo(s) copiado(s).
+35>Build log was saved at "file://t:\gluon\src_main\avi\Release\BuildLog.htm"
+35>Valve_avi - 0 error(s), 0 warning(s)
+26>portal_refract.cpp
+36>Publishing to ..\..\..\game\bin
+25>Compiling...
+25>gooinglass.cpp
+36>Já existe uma subpasta ou um arquivo ..\..\..\game\bin.
+33>meshdx8.cpp
+34>meshdx8.cpp
+26>portal.cpp
+25>flesh_interior_blended_pass_dx8_helper.cpp
+37>------ Rebuild All started: Project: Bugreporter_public, Configuration: Release Win32 ------
+37>Deleting intermediate and output files for project 'Bugreporter_public', configuration 'Release|Win32'
+36>        1 arquivo(s) copiado(s).
+25>filmgrain.cpp
+26>particlesphere_dx9.cpp
+36>        1 arquivo(s) copiado(s).
+34>meshbase.cpp
+36>        1 arquivo(s) copiado(s).
+33>meshbase.cpp
+37>Performing Pre-Build Event...
+36>Build log was saved at "file://t:\gluon\src_main\utils\bugreporter\Release\BuildLog.htm"
+36>Bugreporter - 0 error(s), 0 warning(s)
+26>particlelitgeneric_dx9_helper.cpp
+26>particlelitgeneric_dx9.cpp
+25>filmdust.cpp
+34>memoverride.cpp
+33>memoverride.cpp
+27>Linking...
+37>Compiling...
+26>occlusion_dx9.cpp
+38>------ Rebuild All started: Project: Serverplugin_empty, Configuration: Release Win32 ------
+38>Deleting intermediate and output files for project 'Serverplugin_empty', configuration 'Release|Win32'
+37>bugreporter_upload.cpp
+27>   Creating library .\Release/materialsystem.lib and object .\Release/materialsystem.exp
+25>eyes_dx8_dx9_helper.cpp
+33>hardwareconfig.cpp
+38>Performing Pre-Build Event...
+34>hardwareconfig.cpp
+16>Build log was saved at "file://t:\gluon\src_main\vgui2\vgui_controls\Release\BuildLog.htm"
+16>vgui_controls - 0 error(s), 0 warning(s)
+26>motion_blur_dx9.cpp
+39>------ Rebuild All started: Project: ServerBrowser, Configuration: Release Win32 ------
+39>Deleting intermediate and output files for project 'ServerBrowser', configuration 'Release|Win32'
+34>filesystem_helpers.cpp
+33>filesystem_helpers.cpp
+38>Compiling...
+25>eyes.cpp
+33>d3d_async.cpp
+34>d3d_async.cpp
+38>serverplugin_empty.cpp
+26>morphweight_dx9.cpp
+39>Performing Pre-Build Event...
+37>bugreporter_public.cpp
+25>emissive_scroll_blended_pass_dx8_helper.cpp
+26>morphaccumulate_dx9.cpp
+25>dx8fallbacks.cpp
+34>cvballoctracker.cpp
+33>cvballoctracker.cpp
+37>blockingudpsocket.cpp
+39>Compiling...
+39>VACBannedConnRefusedDialog.cpp
+26>MonitorScreen_dx9.cpp
+33>colorformatdx8.cpp
+34>colorformatdx8.cpp
+25>downsample_nohdr_dx80.cpp
+38>serverplugin_bot.cpp
+27>Publishing to ..\..\game\bin
+37>Generating Code...
+27>Já existe uma subpasta ou um arquivo ..\..\game\bin.
+27>        1 arquivo(s) copiado(s).
+26>modulate_dx9.cpp
+27>        1 arquivo(s) copiado(s).
+25>detail.cpp
+37>Compiling...
+37>memoverride.cpp
+27>        1 arquivo(s) copiado(s).
+38>memoverride.cpp
+26>memoverride.cpp
+25>DecalBaseTimesLightmapAlphaBlendSelfIllum_dx8.cpp
+34>Generating Code...
+33>Generating Code...
+27>Build log was saved at "file://t:\gluon\src_main\materialsystem\Release\BuildLog.htm"
+27>MaterialSystem - 0 error(s), 0 warning(s)
+25>core_dx8.cpp
+26>lightmappedreflective.cpp
+39>SpectateGames.cpp
+25>cloak_blended_pass_dx8_helper.cpp
+40>------ Rebuild All started: Project: GameUI, Configuration: Release Win32 ------
+40>Deleting intermediate and output files for project 'GameUI', configuration 'Release|Win32'
+26>lightmappedgeneric_dx9_helper.cpp
+38>Generating Code...
+37>Linking...
+25>cable_dx8.cpp
+37>   Creating library .\Release/bugreporter_public.lib and object .\Release/bugreporter_public.exp
+38>Linking...
+26>lightmappedgeneric_dx9.cpp
+39>ServerListCompare.cpp
+25>BufferClearObeyStencil_dx8.cpp
+38>   Creating library .\Release/serverplugin_empty.lib and object .\Release/serverplugin_empty.exp
+26>introscreenspaceeffect.cpp
+37>Publishing to ..\..\..\game\bin
+25>BlurFilterY_dx80.cpp
+37>Já existe uma subpasta ou um arquivo ..\..\..\game\bin.
+26>hsv.cpp
+25>BlurFilterX_dx80.cpp
+39>ServerContextMenu.cpp
+37>        1 arquivo(s) copiado(s).
+25>bik_dx81.cpp
+26>hsl_filmgrain_pass2.cpp
+25>bik_dx80.cpp
+39>ServerBrowserDialog.cpp
+37>        1 arquivo(s) copiado(s).
+25>BaseVSShader.cpp
+38>Publishing to ..\..\..\game\bin
+38>Já existe uma subpasta ou um arquivo ..\..\..\game\bin.
+26>Generating Code...
+40>Performing Pre-Build Event...
+37>        1 arquivo(s) copiado(s).
+38>        1 arquivo(s) copiado(s).
+39>ServerBrowser.cpp
+37>Build log was saved at "file://t:\gluon\src_main\utils\bugreporter_public\Release\BuildLog.htm"
+37>Bugreporter_public - 0 error(s), 0 warning(s)
+40>Compiling...
+38>        1 arquivo(s) copiado(s).
+41>------ Rebuild All started: Project: Stdshader_dx6, Configuration: Release Win32 ------
+41>Deleting intermediate and output files for project 'Stdshader_dx6', configuration 'Release|Win32'
+25>Generating Code...
+40>OptionsSubVoice.cpp
+39>.\ServerBrowser.cpp(260) : warning C4101: 'usGamePort' : unreferenced local variable
+39>.\ServerBrowser.cpp(258) : warning C4101: 'nGameID' : unreferenced local variable
+39>.\ServerBrowser.cpp(259) : warning C4101: 'unGameIP' : unreferenced local variable
+39>.\ServerBrowser.cpp(261) : warning C4101: 'usQueryPort' : unreferenced local variable
+39>ModList.cpp
+38>        1 arquivo(s) copiado(s).
+38>Build log was saved at "file://t:\gluon\src_main\utils\serverplugin_sample\Release\BuildLog.htm"
+38>Serverplugin_empty - 0 error(s), 0 warning(s)
+42>------ Rebuild All started: Project: vguimatsurface, Configuration: Release Win32 ------
+42>Deleting intermediate and output files for project 'vguimatsurface', configuration 'Release|Win32'
+39>memoverride.cpp
+40>OptionsSubVideo.cpp
+39>LanGames.cpp
+41>Performing Pre-Build Event...
+42>Performing Pre-Build Event...
+41>Compiling...
+41>shader_dll_verify.cpp
+34>Linking...
+42>Compiling...
+39>InternetGames.cpp
+40>OptionsSubPortal.cpp
+26>Compiling...
+26>hsl_filmgrain_pass1.cpp
+42>vgui_key_translation.cpp
+34>   Creating library .\Release/shaderapidx9.lib and object .\Release/shaderapidx9.exp
+40>OptionsSubMultiplayer.cpp
+41>checksum_md5.cpp
+25>Linking...
+41>checksum_crc.cpp
+26>HDRSelectRange.cpp
+33>Compiling...
+41>writez_dx6.cpp
+42>vgui_controls.cpp
+39>HistoryGames.cpp
+33>shadershadowdx10.cpp
+25>   Creating library Release_dx8/stdshader_dx8.lib and object Release_dx8/stdshader_dx8.exp
+26>HDRCombineTo16Bit.cpp
+42>TextureDictionary.cpp
+41>worldvertextransition_dx6_helper.cpp
+33>shaderdevicedx10.cpp
+41>worldvertextransition_dx6.cpp
+39>FriendsGames.cpp
+26>floattoscreen_vanilla.cpp
+42>memoverride.cpp
+41>worldtwotextureblend_dx6.cpp
+40>OptionsSubMouse.cpp
+42>memorybitmap.cpp
+34>Publishing to ..\..\..\game\bin
+26>floattoscreen.cpp
+39>FavoriteGames.cpp
+34>Já existe uma subpasta ou um arquivo ..\..\..\game\bin.
+41>water_dx60.cpp
+26>floatcombine_autoexpose.cpp
+41>volumetricfog.cpp
+42>MatSystemSurface.cpp
+40>OptionsSubKeyboard.cpp
+39>.\FavoriteGames.cpp(165) : warning C4189: 'pConnected' : local variable is initialized but not referenced
+39>DialogServerPassword.cpp
+26>floatcombine.cpp
+41>viewalpha.cpp
+34>        1 arquivo(s) copiado(s).
+41>vertexlitgeneric_dx6.cpp
+26>flesh_interior_blended_pass_helper.cpp
+40>OptionsSubGame.cpp
+25>Publishing to ..\..\..\game\bin
+34>        1 arquivo(s) copiado(s).
+39>DialogGameInfo.cpp
+25>Já existe uma subpasta ou um arquivo ..\..\..\game\bin.
+41>unlittwotexture_dx6.cpp
+33>shaderapidx10.cpp
+40>OptionsSubDifficulty.cpp
+42>Input.cpp
+41>unlitgeneric_dx6.cpp
+34>        1 arquivo(s) copiado(s).
+26>eyes_dx9.cpp
+25>        1 arquivo(s) copiado(s).
+25>        1 arquivo(s) copiado(s).
+39>DialogAddServer.cpp
+40>OptionsSubAudio.cpp
+42>htmlwindow.cpp
+41>teeth_dx6.cpp
+26>eyes_dx8_dx9_helper.cpp
+33>meshdx10.cpp
+34>Build log was saved at "file://t:\gluon\src_main\materialsystem\shaderapidx9\Release\BuildLog.htm"
+34>shaderapidx9 - 0 error(s), 0 warning(s)
+25>        1 arquivo(s) copiado(s).
+43>------ Rebuild All started: Project: Unicode, Configuration: Release Win32 ------
+43>Deleting intermediate and output files for project 'Unicode', configuration 'Release|Win32'
+39>CustomGames.cpp
+43>Performing Pre-Build Event...
+25>Build log was saved at "file://t:\gluon\src_main\materialsystem\stdshaders\Release_dx8\BuildLog.htm"
+25>stdshader_dx8 - 0 error(s), 0 warning(s)
+44>------ Rebuild All started: Project: AdminServer, Configuration: Release Win32 ------
+44>Deleting intermediate and output files for project 'AdminServer', configuration 'Release|Win32'
+41>sprite_dx6.cpp
+43>Compiling...
+40>OptionsDialog.cpp
+26>eyeglint_dx9.cpp
+43>unicode.cpp
+33>inputlayoutdx10.cpp
+41>sky_dx6.cpp
+44>Performing Pre-Build Event...
+43>memoverride.cpp
+39>BaseGamesPage.cpp
+26>eye_refract_helper.cpp
+42>FontTextureCache.cpp
+40>welcomedialog.cpp
+44>Compiling...
+44>serverinfopanel.cpp
+41>shadowbuild_dx6.cpp
+26>eye_refract.cpp
+41>shadow_dx6.cpp
+26>Engine_Post_dx9.cpp
+43>Generating Code...
+40>sessionoptionsdialog.cpp
+44>ServerConfigPanel.cpp
+42>filesystem_helpers.cpp
+43>Linking...
+41>SetZ.cpp
+33>Generating Code...
+39>Generating Code...
+42>Cursor.cpp
+26>emissive_scroll_blended_pass_helper.cpp
+43>   Creating library .\Release/unicode.lib and object .\Release/unicode.exp
+44>RawLogPanel.cpp
+41>rift_dx6.cpp
+40>sessionlobbydialog.cpp
+44>PlayerPanel.cpp
+26>downsample_nohdr.cpp
+42>Clip2D.cpp
+41>Generating Code...
+43>Publishing to ..\..\game\bin
+40>sessionbrowserdialog.cpp
+33>Linking...
+43>Já existe uma subpasta ou um arquivo ..\..\game\bin.
+26>Downsample.cpp
+44>GraphPanel.cpp
+42>Generating Code...
+33>   Creating library .\Release_dx10/shaderapidx10.lib and object .\Release_dx10/shaderapidx10.exp
+43>        1 arquivo(s) copiado(s).
+43>        1 arquivo(s) copiado(s).
+26>depthwrite.cpp
+44>ChatPanel.cpp
+40>pausedialog.cpp
+43>        1 arquivo(s) copiado(s).
+43>Build log was saved at "file://t:\gluon\src_main\unicode\Release\BuildLog.htm"
+43>Unicode - 0 error(s), 0 warning(s)
+26>DecalModulate_dx9.cpp
+44>BudgetPanelContainer.cpp
+45>------ Rebuild All started: Project: FileSystem_Stdio, Configuration: Release Win32 ------
+45>Deleting intermediate and output files for project 'FileSystem_Stdio', configuration 'Release|Win32'
+40>matchmakingbasepanel.cpp
+26>DecalBaseTimesLightmapAlphaBlendSelfIllum_dx9.cpp
+44>BanPanel.cpp
+40>leaderboarddialog.cpp
+40>dialogmenu.cpp
+44>DialogCvarChange.cpp
+33>Publishing to ..\..\..\game\bin
+39>Compiling...
+44>DialogAddBan.cpp
+33>Já existe uma subpasta ou um arquivo ..\..\..\game\bin.
+40>basedialog.cpp
+39>vgui_controls.cpp
+44>TokenLine.cpp
+26>Generating Code...
+45>Performing Pre-Build Event...
+33>        1 arquivo(s) copiado(s).
+41>Compiling...
+41>refract_dx60.cpp
+44>vgui_controls.cpp
+45>Compiling...
+33>        1 arquivo(s) copiado(s).
+45>zip_utils.cpp
+42>Linking...
+44>vgui_budgetpanelshared.cpp
+40>achievementsdialog.cpp
+41>portalstaticoverlay_dx60.cpp
+44>vgui_budgethistorypanel.cpp
+33>        1 arquivo(s) copiado(s).
+42>   Creating library .\Release/vguimatsurface.lib and object .\Release/vguimatsurface.exp
+39>Linking...
+45>C:\Program Files (x86)\Microsoft Visual Studio 8\VC\PlatformSDK\include\winbase.h(5804) : warning C4005: 'GetCommandLine' : macro redefinition
+45>        t:\gluon\src_main\public\tier0\protected_things.h(185) : see previous definition of 'GetCommandLine'
+45>C:\Program Files (x86)\Microsoft Visual Studio 8\VC\PlatformSDK\include\wincon.h(283) : warning C4005: 'ReadConsoleInput' : macro redefinition
+45>        t:\gluon\src_main\public\tier0\protected_things.h(251) : see previous definition of 'ReadConsoleInput'
+45>C:\Program Files (x86)\Microsoft Visual Studio 8\VC\PlatformSDK\include\winreg.h(270) : warning C4005: 'RegCreateKey' : macro redefinition
+45>        t:\gluon\src_main\public\tier0\protected_things.h(233) : see previous definition of 'RegCreateKey'
+45>C:\Program Files (x86)\Microsoft Visual Studio 8\VC\PlatformSDK\include\winreg.h(304) : warning C4005: 'RegCreateKeyEx' : macro redefinition
+45>        t:\gluon\src_main\public\tier0\protected_things.h(227) : see previous definition of 'RegCreateKeyEx'
+45>C:\Program Files (x86)\Microsoft Visual Studio 8\VC\PlatformSDK\include\winreg.h(551) : warning C4005: 'RegOpenKey' : macro redefinition
+45>        t:\gluon\src_main\public\tier0\protected_things.h(197) : see previous definition of 'RegOpenKey'
+45>C:\Program Files (x86)\Microsoft Visual Studio 8\VC\PlatformSDK\include\winreg.h(577) : warning C4005: 'RegOpenKeyEx' : macro redefinition
+45>        t:\gluon\src_main\public\tier0\protected_things.h(191) : see previous definition of 'RegOpenKeyEx'
+45>C:\Program Files (x86)\Microsoft Visual Studio 8\VC\PlatformSDK\include\winreg.h(641) : warning C4005: 'RegQueryValue' : macro redefinition
+45>        t:\gluon\src_main\public\tier0\protected_things.h(221) : see previous definition of 'RegQueryValue'
+44>vgui_budgetbargraphpanel.cpp
+45>C:\Program Files (x86)\Microsoft Visual Studio 8\VC\PlatformSDK\include\winreg.h(697) : warning C4005: 'RegQueryValueEx' : macro redefinition
+45>        t:\gluon\src_main\public\tier0\protected_things.h(215) : see previous definition of 'RegQueryValueEx'
+45>C:\Program Files (x86)\Microsoft Visual Studio 8\VC\PlatformSDK\include\winreg.h(800) : warning C4005: 'RegSetValue' : macro redefinition
+45>        t:\gluon\src_main\public\tier0\protected_things.h(209) : see previous definition of 'RegSetValue'
+39>   Creating library .\Release/ServerBrowser.lib and object .\Release/ServerBrowser.exp
+45>C:\Program Files (x86)\Microsoft Visual Studio 8\VC\PlatformSDK\include\winreg.h(829) : warning C4005: 'RegSetValueEx' : macro redefinition
+45>        t:\gluon\src_main\public\tier0\protected_things.h(203) : see previous definition of 'RegSetValueEx'
+33>Build log was saved at "file://t:\gluon\src_main\materialsystem\shaderapidx9\Release_dx10\BuildLog.htm"
+33>shaderapidx10 - 0 error(s), 0 warning(s)
+40>Generating Code...
+44>vgui_basebudgetpanel.cpp
+45>QueuedLoader.cpp
+46>------ Rebuild All started: Project: FileSystem_Steam, Configuration: Release Win32 ------
+46>Deleting intermediate and output files for project 'FileSystem_Steam', configuration 'Release|Win32'
+41>portal_dx60.cpp
+44>VarListPropertyPage.cpp
+46>Performing Pre-Build Event...
+26>Compiling...
+26>DebugTextureView.cpp
+44>VarEditDialog.cpp
+41>modulate_dx6.cpp
+45>memoverride.cpp
+46>Compiling...
+44>RemoteServer.cpp
+26>debugmrttexture.cpp
+46>zip_utils.cpp
+41>memoverride.cpp
+45>kevvaluescompiler.cpp
+44>PlayerListCompare.cpp
+41>lightmappedtwotexture.cpp
+45>filetracker.cpp
+26>debugmorphaccumulator_dx9.cpp
+41>lightmappedgeneric_dx6.cpp
+45>filesystem_stdio.cpp
+44>Generating Code...
+42>Publishing to ..\..\game\bin
+46>C:\Program Files (x86)\Microsoft Visual Studio 8\VC\PlatformSDK\include\winbase.h(5804) : warning C4005: 'GetCommandLine' : macro redefinition
+46>        t:\gluon\src_main\public\tier0\protected_things.h(185) : see previous definition of 'GetCommandLine'
+46>C:\Program Files (x86)\Microsoft Visual Studio 8\VC\PlatformSDK\include\wincon.h(283) : warning C4005: 'ReadConsoleInput' : macro redefinition
+46>        t:\gluon\src_main\public\tier0\protected_things.h(251) : see previous definition of 'ReadConsoleInput'
+42>Já existe uma subpasta ou um arquivo ..\..\game\bin.
+46>C:\Program Files (x86)\Microsoft Visual Studio 8\VC\PlatformSDK\include\winreg.h(270) : warning C4005: 'RegCreateKey' : macro redefinition
+46>        t:\gluon\src_main\public\tier0\protected_things.h(233) : see previous definition of 'RegCreateKey'
+46>C:\Program Files (x86)\Microsoft Visual Studio 8\VC\PlatformSDK\include\winreg.h(304) : warning C4005: 'RegCreateKeyEx' : macro redefinition
+46>        t:\gluon\src_main\public\tier0\protected_things.h(227) : see previous definition of 'RegCreateKeyEx'
+46>C:\Program Files (x86)\Microsoft Visual Studio 8\VC\PlatformSDK\include\winreg.h(551) : warning C4005: 'RegOpenKey' : macro redefinition
+46>        t:\gluon\src_main\public\tier0\protected_things.h(197) : see previous definition of 'RegOpenKey'
+46>C:\Program Files (x86)\Microsoft Visual Studio 8\VC\PlatformSDK\include\winreg.h(577) : warning C4005: 'RegOpenKeyEx' : macro redefinition
+46>        t:\gluon\src_main\public\tier0\protected_things.h(191) : see previous definition of 'RegOpenKeyEx'
+46>C:\Program Files (x86)\Microsoft Visual Studio 8\VC\PlatformSDK\include\winreg.h(641) : warning C4005: 'RegQueryValue' : macro redefinition
+46>        t:\gluon\src_main\public\tier0\protected_things.h(221) : see previous definition of 'RegQueryValue'
+46>C:\Program Files (x86)\Microsoft Visual Studio 8\VC\PlatformSDK\include\winreg.h(697) : warning C4005: 'RegQueryValueEx' : macro redefinition
+46>        t:\gluon\src_main\public\tier0\protected_things.h(215) : see previous definition of 'RegQueryValueEx'
+46>C:\Program Files (x86)\Microsoft Visual Studio 8\VC\PlatformSDK\include\winreg.h(800) : warning C4005: 'RegSetValue' : macro redefinition
+46>        t:\gluon\src_main\public\tier0\protected_things.h(209) : see previous definition of 'RegSetValue'
+46>C:\Program Files (x86)\Microsoft Visual Studio 8\VC\PlatformSDK\include\winreg.h(829) : warning C4005: 'RegSetValueEx' : macro redefinition
+46>        t:\gluon\src_main\public\tier0\protected_things.h(203) : see previous definition of 'RegSetValueEx'
+41>introscreenspaceeffect_dx60.cpp
+45>filesystem_async.cpp
+26>core_dx9.cpp
+46>memoverride.cpp
+41>eyes_dx6.cpp
+46>kevvaluescompiler.cpp
+45>basefilesystem.cpp
+26>colorcorrection.cpp
+46>filetracker.cpp
+42>        1 arquivo(s) copiado(s).
+42>        1 arquivo(s) copiado(s).
+41>eyeball.cpp
+39>Publishing to ..\..\game\bin
+41>decalmodulate.cpp
+26>cloak_dx9_helper.cpp
+39>Já existe uma subpasta ou um arquivo ..\..\game\bin.
+46>filesystem_steam.cpp
+42>        1 arquivo(s) copiado(s).
+45>Generating Code...
+39>        1 arquivo(s) copiado(s).
+41>DecalBaseTimesLightmapAlphaBlendSelfIllum_dx6.cpp
+42>Build log was saved at "file://t:\gluon\src_main\vguimatsurface\Release\BuildLog.htm"
+42>vguimatsurface - 0 error(s), 0 warning(s)
+39>        1 arquivo(s) copiado(s).
+46>filesystem_async.cpp
+47>------ Rebuild All started: Project: shaderapiempty, Configuration: Release Win32 ------
+47>Deleting intermediate and output files for project 'shaderapiempty', configuration 'Release|Win32'
+41>decal.cpp
+26>cloak_blended_pass_helper.cpp
+41>cloud.cpp
+46>basefilesystem.cpp
+39>        1 arquivo(s) copiado(s).
+40>Compiling...
+40>SaveGameDialog_Xbox.cpp
+41>cable_dx6.cpp
+26>cloak.cpp
+47>Performing Pre-Build Event...
+41>BufferClearObeyStencil_dx6.cpp
+46>Generating Code...
+26>cable_dx9.cpp
+47>Compiling...
+39>Build log was saved at "file://t:\gluon\src_main\serverbrowser\Release\BuildLog.htm"
+39>ServerBrowser - 0 error(s), 5 warning(s)
+44>Compiling...
+44>PlayerContextMenu.cpp
+47>shaderapiempty.cpp
+44>msgbuffer.cpp
+44>memoverride.cpp
+40>SaveGameDialog.cpp
+41>Generating Code...
+26>BufferClearObeyStencil_dx9.cpp
+47>memoverride.cpp
+26>BlurFilterY.cpp
+44>MapCycleEditDialog.cpp
+40>PlayerListDialog.cpp
+47>Generating Code...
+26>BlurFilterX.cpp
+47>Linking...
+47>   Creating library .\Release/shaderapiempty.lib and object .\Release/shaderapiempty.exp
+41>Linking...
+47>Publishing to ..\..\..\game\bin
+41>   Creating library Release_dx6/stdshader_dx6.lib and object Release_dx6/stdshader_dx6.exp
+26>Bloom.cpp
+45>Linking...
+40>OptionsDialog_Xbox.cpp
+47>Já existe uma subpasta ou um arquivo ..\..\..\game\bin.
+44>GamePanelInfo.cpp
+47>        1 arquivo(s) copiado(s).
+45>   Creating library Release_Stdio/filesystem_stdio.lib and object Release_Stdio/filesystem_stdio.exp
+47>        1 arquivo(s) copiado(s).
+26>bik_dx90.cpp
+47>        1 arquivo(s) copiado(s).
+46>Linking...
+47>Build log was saved at "file://t:\gluon\src_main\materialsystem\shaderapiempty\Release\BuildLog.htm"
+47>shaderapiempty - 0 error(s), 0 warning(s)
+46>   Creating library .\Release/filesystem_steam.lib and object .\Release/filesystem_steam.exp
+40>NewGameDialog.cpp
+26>BaseVSShader.cpp
+44>ConfigPanel.cpp
+41>Publishing to ..\..\..\game\bin
+26>aftershock_helper.cpp
+41>Já existe uma subpasta ou um arquivo ..\..\..\game\bin.
+45>Publishing to ..\..\game\bin
+40>MultiplayerAdvancedDialog.cpp
+41>        1 arquivo(s) copiado(s).
+44>BanContextMenu.cpp
+45>Já existe uma subpasta ou um arquivo ..\..\game\bin.
+44>AdminServer.cpp
+41>        1 arquivo(s) copiado(s).
+40>LoadingDialog.cpp
+26>aftershock.cpp
+45>        1 arquivo(s) copiado(s).
+26>accumbuff5sample.cpp
+41>        1 arquivo(s) copiado(s).
+46>Publishing to ..\..\game\bin
+40>LoadGameDialog_Xbox.cpp
+45>        1 arquivo(s) copiado(s).
+44>Generating Code...
+46>Já existe uma subpasta ou um arquivo ..\..\game\bin.
+26>AccumBuff4Sample.cpp
+41>Build log was saved at "file://t:\gluon\src_main\materialsystem\stdshaders\Release_dx6\BuildLog.htm"
+41>Stdshader_dx6 - 0 error(s), 0 warning(s)
+45>        1 arquivo(s) copiado(s).
+46>        1 arquivo(s) copiado(s).
+40>LoadGameDialog.cpp
+46>        1 arquivo(s) copiado(s).
+45>Build log was saved at "file://t:\gluon\src_main\filesystem\Release_Stdio\BuildLog.htm"
+45>FileSystem_Stdio - 0 error(s), 10 warning(s)
+46>        1 arquivo(s) copiado(s).
+40>LoadCommentaryDialog.cpp
+26>Generating Code...
+46>Build log was saved at "file://t:\gluon\src_main\filesystem\Release\BuildLog.htm"
+46>FileSystem_Steam - 0 error(s), 10 warning(s)
+44>Linking...
+40>GameConsoleDialog.cpp
+44>   Creating library .\Release/AdminServer.lib and object .\Release/AdminServer.exp
+40>CreateMultiplayerGameServerPage.cpp
+40>CreateMultiplayerGameGameplayPage.cpp
+26>Linking...
+40>CreateMultiplayerGameDialog.cpp
+26>   Creating library Release_dx9/stdshader_dx9.lib and object Release_dx9/stdshader_dx9.exp
+40>CreateMultiplayerGameBotPage.cpp
+44>Publishing to ..\..\..\game\bin
+40>ControllerDialog.cpp
+44>Já existe uma subpasta ou um arquivo ..\..\..\game\bin.
+44>        1 arquivo(s) copiado(s).
+44>        1 arquivo(s) copiado(s).
+40>ContentControlDialog.cpp
+44>        1 arquivo(s) copiado(s).
+40>CommentaryExplanationDialog.cpp
+26>Publishing to ..\..\..\game\bin
+44>Build log was saved at "file://t:\gluon\src_main\Tracker\AdminServer\Release\BuildLog.htm"
+44>AdminServer - 0 error(s), 0 warning(s)
+26>Já existe uma subpasta ou um arquivo ..\..\..\game\bin.
+40>CommentaryDialog.cpp
+26>        1 arquivo(s) copiado(s).
+26>        1 arquivo(s) copiado(s).
+40>ChangeGameDialog.cpp
+26>        1 arquivo(s) copiado(s).
+40>Generating Code...
+26>Build log was saved at "file://t:\gluon\src_main\materialsystem\stdshaders\Release_dx9\BuildLog.htm"
+26>stdshader_dx9 - 0 error(s), 0 warning(s)
+40>Compiling...
+40>BonusMapsDialog.cpp
+40>BenchmarkDialog.cpp
+40>BaseSaveGameDialog.cpp
+40>vcontrolslistpanel.cpp
+40>URLButton.cpp
+40>LabeledCommandComboBox.cpp
+40>KeyToggleCheckButton.cpp
+40>CvarToggleCheckButton.cpp
+40>CvarTextEntry.cpp
+40>CvarSlider.cpp
+40>CvarNegateCheckButton.cpp
+40>CommandCheckButton.cpp
+40>BitmapImagePanel.cpp
+40>VGuiSystemModuleLoader.cpp
+40>vgui_controls.cpp
+40>TGAImagePanel.cpp
+40>TextEntryBox.cpp
+40>Sys_Utils.cpp
+40>Socket.cpp
+40>ScriptObject.cpp
+40>Generating Code...
+40>Compiling...
+40>SaveGameBrowserDialog.cpp
+40>RunGameEngine.cpp
+40>PanelListPanel.cpp
+40>ObjectList.cpp
+40>netapi.cpp
+40>msgbuffer.cpp
+40>MouseMessageForwardingPanel.cpp
+40>ModInfo.cpp
+40>memoverride.cpp
+40>LogoFile.cpp
+40>language.cpp
+40>GameUI_Interface.cpp
+40>GameConsole.cpp
+40>BonusMapsDatabase.cpp
+40>BasePanel.cpp
+40>BackgroundMenuButton.cpp
+40>Generating Code...
+40>Linking...
+40>   Creating library .\Release/GameUI.lib and object .\Release/GameUI.exp
+40>Publishing to ..\..\game\bin
+40>Já existe uma subpasta ou um arquivo ..\..\game\bin.
+40>        1 arquivo(s) copiado(s).
+40>        1 arquivo(s) copiado(s).
+40>        1 arquivo(s) copiado(s).
+40>Build log was saved at "file://t:\gluon\src_main\gameui\Release\BuildLog.htm"
+40>GameUI - 0 error(s), 0 warning(s)
+========== Rebuild All: 45 succeeded, 1 failed, 1 skipped ==========

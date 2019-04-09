@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<title>samples\pull\pull1.c</title>
+<link rel="stylesheet" type="text/css" href="highlight.css">
+</head>
+<body class="hl">
+<pre class="hl"><span class="dir">#include &lt;stdio.h&gt;</span>
+<span class="dir">#include &lt;string.h&gt;</span>
+<span class="dir">#include &lt;stdlib.h&gt;</span>
+<span class="dir">#include</span> <span class="dstr">&quot;xmlreader.h&quot;</span><span class="dir"></span>
+
+<span class="kwb">int</span> <span class="kwd">cstream</span><span class="sym">(</span>BYTE <span class="sym">*</span>buf<span class="sym">,</span> <span class="kwb">int</span> cBytes<span class="sym">,</span> <span class="kwb">int</span> <span class="sym">*</span>cBytesActual<span class="sym">,</span> <span class="kwb">void</span> <span class="sym">*</span>inputData<span class="sym">)</span>
+<span class="sym">{</span>
+  <span class="sym">*</span>cBytesActual <span class="sym">=</span> <span class="kwd">fread</span><span class="sym">(</span>buf<span class="sym">,</span> <span class="num">1</span><span class="sym">,</span> cBytes<span class="sym">, (</span><span class="kwb">FILE</span><span class="sym">*)</span>inputData<span class="sym">);</span>
+  <span class="kwa">return</span> <span class="sym">(*</span>cBytesActual <span class="sym">&lt;</span> cBytes<span class="sym">);</span>
+<span class="sym">}</span>
+
+<span class="kwb">int</span> <span class="kwd">main</span><span class="sym">(</span><span class="kwb">int</span> argc<span class="sym">,</span> <span class="kwb">char</span><span class="sym">*</span> argv<span class="sym">[])</span>
+<span class="sym">{</span>
+  <span class="kwb">struct</span> XMLReader_t r<span class="sym">;</span>
+
+  <span class="kwa">if</span> <span class="sym">(!</span><span class="kwd">XMLReader_Create</span><span class="sym">(&amp;</span>r<span class="sym">,</span> <span class="num">0</span><span class="sym">)) {</span>
+    <span class="kwd">puts</span><span class="sym">(</span><span class="str">&quot;Error creating parser&quot;</span><span class="sym">);</span>
+    <span class="kwa">return</span> EXIT_FAILURE<span class="sym">;</span>
+  <span class="sym">}</span>
+
+  <span class="kwa">if</span> <span class="sym">(</span><span class="kwd">XMLReader_Parse</span><span class="sym">(&amp;</span>r<span class="sym">,</span> cstream<span class="sym">,</span> stdin<span class="sym">,</span> <span class="num">0</span><span class="sym">)) {</span>
+    <span class="kwb">union</span> XMLReaderNode_t <span class="sym">*</span>rn<span class="sym">;</span>
+    <span class="kwb">int</span> i<span class="sym">;</span>
+
+    <span class="kwa">while</span><span class="sym">((</span>rn <span class="sym">=</span> <span class="kwd">XMLReader_Read</span><span class="sym">(&amp;</span>r<span class="sym">))) {</span>
+      <span class="kwa">if</span> <span class="sym">(</span>rn<span class="sym">-&gt;</span>type <span class="sym">==</span> XMLREADERTYPE_STARTELEMENT<span class="sym">) {</span>
+        <span class="kwa">if</span> <span class="sym">(!</span><span class="kwd">strcmp</span><span class="sym">((</span><span class="kwb">const char</span><span class="sym">*)</span>rn<span class="sym">-&gt;</span>startelement<span class="sym">.</span>qname<span class="sym">,</span> <span class="str">&quot;toni.uusitalo&quot;</span><span class="sym">)) {</span>
+          <span class="kwd">printf</span><span class="sym">(</span><span class="str">&quot;Don't be silly, illegal naming policy of xml element,</span><span class="esc">\n</span><span class="str">&quot;</span>
+            <span class="str">&quot;Your parsing will be terminated immediately!</span><span class="esc">\n</span><span class="str">&quot;</span><span class="sym">);</span>
+          <span class="kwd">XMLReader_AbortParse</span><span class="sym">(&amp;</span>r<span class="sym">);</span>
+          <span class="kwa">break</span><span class="sym">;</span> <span class="com">/* note: DON'T call Read after AbortParse */</span>
+        <span class="sym">}</span>
+        <span class="kwd">printf</span><span class="sym">(</span><span class="str">&quot;STARTELEMENT -- uri: %s localName: %s qName: %s</span><span class="esc">\n</span><span class="str">&quot;</span>
+          <span class="str">&quot;  attributes count: %d</span><span class="esc">\n</span><span class="str">&quot;</span><span class="sym">,</span>
+            rn<span class="sym">-&gt;</span>startelement<span class="sym">.</span>uri<span class="sym">,</span>
+            rn<span class="sym">-&gt;</span>startelement<span class="sym">.</span>localname<span class="sym">,</span>
+            rn<span class="sym">-&gt;</span>startelement<span class="sym">.</span>qname<span class="sym">,</span>
+            rn<span class="sym">-&gt;</span>startelement<span class="sym">.</span>atts<span class="sym">-&gt;</span>length<span class="sym">);</span>
+        <span class="kwa">for</span><span class="sym">(</span>i<span class="sym">=</span><span class="num">0</span><span class="sym">;</span> i<span class="sym">&lt;</span>rn<span class="sym">-&gt;</span>startelement<span class="sym">.</span>atts<span class="sym">-&gt;</span>length<span class="sym">;</span> i<span class="sym">++) {</span>
+          <span class="kwb">struct</span> XMLReaderAttribute_t <span class="sym">*</span>a <span class="sym">=</span> <span class="kwd">XMLVector_Get</span><span class="sym">(</span>rn<span class="sym">-&gt;</span>startelement<span class="sym">.</span>atts<span class="sym">,</span> i<span class="sym">);</span>
+          <span class="kwd">printf</span><span class="sym">(</span><span class="str">&quot;  name: %s value: %s</span><span class="esc">\n</span><span class="str">&quot;</span><span class="sym">,</span>
+            <span class="kwd">XMLReader_GetAttributeQName</span><span class="sym">(&amp;</span>r<span class="sym">,</span> a<span class="sym">),</span>
+            <span class="kwd">XMLReader_GetAttributeValue</span><span class="sym">(&amp;</span>r<span class="sym">,</span> a<span class="sym">));</span>
+        <span class="sym">}</span>
+      <span class="sym">}</span>
+      <span class="kwa">else if</span> <span class="sym">(</span>rn<span class="sym">-&gt;</span>type <span class="sym">==</span> XMLREADERTYPE_ENDELEMENT<span class="sym">) {</span>
+        <span class="kwd">printf</span><span class="sym">(</span><span class="str">&quot;ENDELEMENT -- uri: %s localName: %s qName: %s</span><span class="esc">\n</span><span class="str">&quot;</span><span class="sym">,</span>
+            rn<span class="sym">-&gt;</span>endelement<span class="sym">.</span>uri<span class="sym">,</span>
+            rn<span class="sym">-&gt;</span>endelement<span class="sym">.</span>localname<span class="sym">,</span>
+            rn<span class="sym">-&gt;</span>endelement<span class="sym">.</span>qname<span class="sym">);</span>
+      <span class="sym">}</span>
+      <span class="kwa">else if</span> <span class="sym">(</span>rn<span class="sym">-&gt;</span>type <span class="sym">==</span> XMLREADERTYPE_CHARS<span class="sym">) {</span>
+        <span class="kwd">printf</span><span class="sym">(</span><span class="str">&quot;CHARS -- text: %s length: %d</span><span class="esc">\n</span><span class="str">&quot;</span><span class="sym">,</span>
+            rn<span class="sym">-&gt;</span>chars<span class="sym">.</span>text<span class="sym">,</span> rn<span class="sym">-&gt;</span>chars<span class="sym">.</span>length<span class="sym">);</span>
+      <span class="sym">}</span>
+      <span class="kwa">else if</span> <span class="sym">(</span>rn<span class="sym">-&gt;</span>type <span class="sym">==</span> XMLREADERTYPE_COMMENT<span class="sym">) {</span>
+        <span class="kwd">printf</span><span class="sym">(</span><span class="str">&quot;COMMENT -- text: %s length: %d</span><span class="esc">\n</span><span class="str">&quot;</span><span class="sym">,</span>
+            rn<span class="sym">-&gt;</span>comment<span class="sym">.</span>text<span class="sym">,</span> rn<span class="sym">-&gt;</span>comment<span class="sym">.</span>length<span class="sym">);</span>
+      <span class="sym">}</span>
+      <span class="kwa">else if</span> <span class="sym">(</span>rn<span class="sym">-&gt;</span>type <span class="sym">==</span> XMLREADERTYPE_PI<span class="sym">) {</span>
+        <span class="kwd">printf</span><span class="sym">(</span><span class="str">&quot;PROCESSINGINSTRUCTION -- target: %s data: %s</span><span class="esc">\n</span><span class="str">&quot;</span><span class="sym">,</span>
+            rn<span class="sym">-&gt;</span>pi<span class="sym">.</span>target<span class="sym">,</span> rn<span class="sym">-&gt;</span>pi<span class="sym">.</span>data<span class="sym">);</span>
+      <span class="sym">}</span>
+    <span class="sym">}</span> <span class="com">/* while read != NULL */</span>
+  <span class="sym">}</span> <span class="com">/* parse ok */</span>
+
+  <span class="kwa">if</span> <span class="sym">(</span>r<span class="sym">.</span>errorcode<span class="sym">) {</span>
+    <span class="kwa">if</span> <span class="sym">(</span>r<span class="sym">.</span>errorcode <span class="sym">==</span> ERR_XMLP_VALIDATION<span class="sym">)</span>
+      <span class="kwd">fprintf</span><span class="sym">(</span>stderr<span class="sym">,</span> <span class="str">&quot;</span><span class="esc">\n</span><span class="str">Validation Error: %s</span><span class="esc">\n</span><span class="str">At line %d, col %d, code %d</span><span class="esc">\n</span><span class="str">&quot;</span><span class="sym">,</span>
+        r<span class="sym">.</span>dtdv<span class="sym">-&gt;</span>ErrorString<span class="sym">,</span> r<span class="sym">.</span>dtdv<span class="sym">-&gt;</span>ErrorLine<span class="sym">,</span> r<span class="sym">.</span>dtdv<span class="sym">-&gt;</span>ErrorColumn<span class="sym">,</span> r<span class="sym">.</span>dtdv<span class="sym">-&gt;</span>ErrorCode<span class="sym">);</span>
+    <span class="kwa">else</span>
+      <span class="kwd">fprintf</span><span class="sym">(</span>stderr<span class="sym">,</span> <span class="str">&quot;</span><span class="esc">\n</span><span class="str">Parsing Error: %s</span><span class="esc">\n</span><span class="str">At line %d, col %d, code %d</span><span class="esc">\n</span><span class="str">&quot;</span><span class="sym">,</span>
+        r<span class="sym">.</span>parser<span class="sym">-&gt;</span>ErrorString<span class="sym">,</span> r<span class="sym">.</span>parser<span class="sym">-&gt;</span>ErrorLine<span class="sym">,</span> r<span class="sym">.</span>parser<span class="sym">-&gt;</span>ErrorColumn<span class="sym">,</span> r<span class="sym">.</span>errorcode<span class="sym">);</span>
+
+  <span class="sym">}</span>
+
+  <span class="kwd">XMLReader_Free</span><span class="sym">(&amp;</span>r<span class="sym">);</span>
+  <span class="kwa">return</span> <span class="num">0</span><span class="sym">;</span>
+<span class="sym">}</span>
+</pre>
+</body>
+</html>
+<!--HTML generated by highlight 2.4-1, http://www.andre-simon.de/-->
