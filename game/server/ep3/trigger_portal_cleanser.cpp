@@ -210,7 +210,7 @@ void CTriggerPortalCleanser::Touch( CBaseEntity *pOther )
 		pBaseAnimating->GetVelocity( &vOldVel, &vOldAng );
 
 		IPhysicsObject* pOldPhys = pBaseAnimating->VPhysicsGetObject();
-
+		
 		if ( pOldPhys && ( pOldPhys->GetGameFlags() & FVPHYSICS_PLAYER_HELD ) )
 		{
 			CPortal_Player *pPlayer = (CPortal_Player *)GetPlayerHoldingEntity( pBaseAnimating );
@@ -228,6 +228,7 @@ void CTriggerPortalCleanser::Touch( CBaseEntity *pOther )
 		CBaseEntity *pDisolvingObj = ConvertToSimpleProp( pBaseAnimating );
 		if ( pDisolvingObj )
 		{
+			pDisolvingObj->EmitSound( "NPC_CombineBall.KillImpact");
 			// Remove old prop, transfer name and children to the new simple prop
 			pDisolvingObj->SetName( pBaseAnimating->GetEntityName() );
 			UTIL_TransferPoseParameters( pBaseAnimating, pDisolvingObj );

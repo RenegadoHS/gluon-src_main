@@ -25,7 +25,7 @@
 
 
 static ConVar	hud_quickinfo( "hud_quickinfo", "1", FCVAR_ARCHIVE );
-static ConVar	hud_portalhud( "hud_portalhud", "0", FCVAR_ARCHIVE );
+static ConVar	hud_portalhud( "hud_portalhud", "1", FCVAR_ARCHIVE );
 static ConVar	hud_quickinfo_swap( "hud_quickinfo_swap", "0", FCVAR_ARCHIVE );
 
 extern ConVar crosshair;
@@ -91,7 +91,9 @@ private:
 	CHudTexture	*m_icon_lbe;	// left bracket, empty
 
 	CHudTexture	*m_icon_rbnone;	// right bracket
+	CHudTexture	*m_icon_rbnonen;	// right bracket
 	CHudTexture	*m_icon_lbnone;	// left bracket
+	CHudTexture	*m_icon_lbnonen;	// left bracket
 };
 
 DECLARE_HUDELEMENT( CHUDQuickInfo );
@@ -160,8 +162,10 @@ void CHUDQuickInfo::VidInit( void )
 			m_icon_lbe = gHUD.GetIcon( "portal_crosshair_last_placed" );
 			m_icon_rbn = gHUD.GetIcon( "portal_crosshair_right_invalid" );
 			m_icon_lbn = gHUD.GetIcon( "portal_crosshair_left_invalid" );
-			m_icon_rbnone = gHUD.GetIcon( "crosshair_right" );
-			m_icon_lbnone = gHUD.GetIcon( "crosshair_left" );
+			m_icon_rbnone = gHUD.GetIcon( "crosshair_right_full" );
+			m_icon_rbnonen = gHUD.GetIcon( "crosshair_right_empty" );
+			m_icon_lbnone = gHUD.GetIcon( "crosshair_left_full" );
+			m_icon_lbnonen = gHUD.GetIcon( "crosshair_left_empty" );
 		}
 	}else{
 		m_icon_rb = gHUD.GetIcon( "crosshair_right_full" );
@@ -170,6 +174,10 @@ void CHUDQuickInfo::VidInit( void )
 		m_icon_lbe = gHUD.GetIcon( "crosshair_left_empty" );
 		m_icon_rbn = gHUD.GetIcon( "crosshair_right" );
 		m_icon_lbn = gHUD.GetIcon( "crosshair_left" );
+		m_icon_rbnone = gHUD.GetIcon( "crosshair_right_full" );
+		m_icon_rbnonen = gHUD.GetIcon( "crosshair_right_empty" );
+		m_icon_lbnone = gHUD.GetIcon( "crosshair_left_full" );
+		m_icon_lbnonen = gHUD.GetIcon( "crosshair_left_empty" );
 	}
 }
 
@@ -274,6 +282,7 @@ void CHUDQuickInfo::OnThink()
 void CHUDQuickInfo::Paint()
 {
 	C_Portal_Player *pPortalPlayer = (C_Portal_Player*)( C_BasePlayer::GetLocalPlayer() );
+	C_Portal_Player *player = (C_Portal_Player*)( C_BasePlayer::GetLocalPlayer() );
 	if ( pPortalPlayer == NULL )
 		return;
 
@@ -283,6 +292,60 @@ void CHUDQuickInfo::Paint()
 
 	int		xCenter	= ( ScreenWidth() - m_icon_c->Width() ) / 2;
 	int		yCenter = ( ScreenHeight() - m_icon_c->Height() ) / 2;
+	int		yCenter2 = ( ScreenHeight() - m_icon_c->Height() ) / 2;
+	float	scalar  = 138.0f/255.0f;
+	
+	// Check our health for a warning
+	int	health	= player->GetHealth();
+	if ( health != m_lastHealth )
+	{
+		UpdateEventTime();
+		m_lastHealth = health;
+
+		if ( health <= HEALTH_WARNING_THRESHOLD )
+		{
+			if ( m_warnHealth == false )
+			{
+				m_healthFade = 255;
+				m_warnHealth = true;
+				
+				CLocalPlayerFilter filter;
+				C_BaseEntity::EmitSound( filter, SOUND_FROM_LOCAL_PLAYER, "HUDQuickInfo.LowHealth" );
+			}
+		}
+		else
+		{
+			m_warnHealth = false;
+		}
+	}
+
+	// Check our ammo for a warning
+	int	ammo = pWeapon->Clip1();
+	if ( ammo != m_lastAmmo )
+	{
+		UpdateEventTime();
+		m_lastAmmo	= ammo;
+
+		// Find how far through the current clip we are
+		float ammoPerc = (float) ammo / (float) pWeapon->GetMaxClip1();
+
+		// Warn if we're below a certain percentage of our clip's size
+		if (( pWeapon->GetMaxClip1() > 1 ) && ( ammoPerc <= ( 1.0f - CLIP_PERC_THRESHOLD )))
+		{
+			if ( m_warnAmmo == false )
+			{
+				m_ammoFade = 255;
+				m_warnAmmo = true;
+
+				CLocalPlayerFilter filter;
+				C_BaseEntity::EmitSound( filter, SOUND_FROM_LOCAL_PLAYER, "HUDQuickInfo.LowAmmo" );
+			}
+		}
+		else
+		{
+			m_warnAmmo = false;
+		}
+	}
 
 	Color clrNormal = gHUD.m_clrNormal;
 	clrNormal[3] = 255;
@@ -294,6 +357,7 @@ void CHUDQuickInfo::Paint()
 	// adjust center for the bigger crosshairs
 	xCenter	= ScreenWidth() / 2;
 	yCenter = ( ScreenHeight() - m_icon_lb->Height() ) / 2;
+	yCenter2 = ( ScreenHeight() - m_icon_lbnone->Height() ) / 2;
 
 	C_WeaponPortalgun *pPortalgun = dynamic_cast<C_WeaponPortalgun*>( pWeapon );
 
@@ -305,12 +369,71 @@ void CHUDQuickInfo::Paint()
 		bPortalPlacability[1] = pPortalgun->GetPortal2Placablity() > 0.5f;
 	}
 
-	if ( !hud_quickinfo.GetInt() || !pPortalgun || ( !pPortalgun->CanFirePortal1() && !pPortalgun->CanFirePortal2() ) )
+	if ( !hud_quickinfo.GetInt() || !FClassnameIs( pPortalPlayer->GetActiveWeapon(), "weapon_portalgun" ) || ( !pPortalgun->CanFirePortal1() && !pPortalgun->CanFirePortal2() ) )
 	{
 		// no quickinfo or we can't fire either portal, just draw the small versions of the crosshairs
-		clrNormal[3] = 196;
-		m_icon_lbnone->DrawSelf(xCenter - (m_icon_lbnone->Width() * 2), yCenter, clrNormal);
-		m_icon_rbnone->DrawSelf(xCenter + m_icon_rbnone->Width(), yCenter, clrNormal);
+		//clrNormal[3] = 196;
+		//m_icon_lbnone->DrawSelf(xCenter - (m_icon_lbnone->Width() * 2), yCenter, clrNormal);
+		//m_icon_rbnone->DrawSelf(xCenter + m_icon_rbnone->Width(), yCenter, clrNormal);
+		
+		int	sinScale = (int)( fabs(sin(gpGlobals->curtime*8.0f)) * 128.0f );
+		
+		if ( m_healthFade > 0.0f )
+		{
+			DrawWarning( xCenter - (m_icon_lbnone->Width() * 2), yCenter2, m_icon_lbnone, m_healthFade );
+		}
+		else
+		{
+			float healthPerc = (float) health / 100.0f;
+			healthPerc = clamp( healthPerc, 0.0f, 1.0f );
+
+			Color healthColor = m_warnHealth ? gHUD.m_clrCaution : gHUD.m_clrNormal;
+		
+			if ( m_warnHealth )
+			{
+				healthColor[3] = 255 * sinScale;
+			}
+			else
+			{
+				healthColor[3] = 255 * scalar;
+			}
+		
+			gHUD.DrawIconProgressBar( xCenter - (m_icon_lbnone->Width() * 2), yCenter2, m_icon_lbnone, m_icon_lbnonen, ( 1.0f - healthPerc ), healthColor, CHud::HUDPB_VERTICAL );
+		}
+		
+		// Update our ammo
+		if ( m_ammoFade > 0.0f )
+		{
+			DrawWarning( xCenter + m_icon_rbnone->Width(), yCenter2, m_icon_rbnone, m_ammoFade );
+		}
+		else
+		{
+			float ammoPerc;
+	
+			if ( pWeapon->GetMaxClip1() <= 0 )
+			{
+				ammoPerc = 0.0f;
+			}
+			else
+			{
+				ammoPerc = 1.0f - ( (float) ammo / (float) pWeapon->GetMaxClip1() );
+				ammoPerc = clamp( ammoPerc, 0.0f, 1.0f );
+			}
+
+			Color ammoColor = m_warnAmmo ? gHUD.m_clrCaution : gHUD.m_clrNormal;
+		
+			if ( m_warnAmmo )
+			{
+				ammoColor[3] = 255 * sinScale;
+			}
+			else
+			{
+				ammoColor[3] = 255 * scalar;
+			}
+		
+			gHUD.DrawIconProgressBar( xCenter + m_icon_rbnone->Width(), yCenter2, m_icon_rbnone, m_icon_rbnonen, ammoPerc, ammoColor, CHud::HUDPB_VERTICAL );
+		}
+		
 		return;
 	}
 
@@ -332,7 +455,7 @@ void CHUDQuickInfo::Paint()
 	float fLeftPlaceBarFill = 0.0f;
 	float fRightPlaceBarFill = 0.0f;
 
-	if ( pPortalgun->CanFirePortal1() && pPortalgun->CanFirePortal2() )
+	if ( FClassnameIs( pPortalPlayer->GetActiveWeapon(), "weapon_portalgun" ) && pPortalgun->CanFirePortal1() && pPortalgun->CanFirePortal2() )
 	{
 		int iDrawLastPlaced = 0;
 
@@ -386,7 +509,7 @@ void CHUDQuickInfo::Paint()
 		}
 	}
 	//can't fire both portals, and we want the crosshair to remain somewhat symmetrical without being confusing
-	else if ( !pPortalgun->CanFirePortal1() )
+	else if ( FClassnameIs( pPortalPlayer->GetActiveWeapon(), "weapon_portalgun" ) && !pPortalgun->CanFirePortal1() )
 	{
 		// clone portal2 info to portal 1
 		portal1Color = portal2Color;
@@ -394,7 +517,7 @@ void CHUDQuickInfo::Paint()
 		lastPlaced2Color[3] = 0.0f;
 		bPortalPlacability[0] = bPortalPlacability[1];
 	}
-	else if ( !pPortalgun->CanFirePortal2() )
+	else if ( FClassnameIs( pPortalPlayer->GetActiveWeapon(), "weapon_portalgun" ) && !pPortalgun->CanFirePortal2() )
 	{
 		// clone portal1 info to portal 2
 		portal2Color = portal1Color;
@@ -403,7 +526,7 @@ void CHUDQuickInfo::Paint()
 		bPortalPlacability[1] = bPortalPlacability[0];
 	}
 
-	if ( pPortalgun->IsHoldingObject() )
+	if ( FClassnameIs( pPortalPlayer->GetActiveWeapon(), "weapon_portalgun" ) && pPortalgun->IsHoldingObject() )
 	{
 		// Change the middle to orange 
 		portal1Color = portal2Color = UTIL_Portal_Color( 0 );

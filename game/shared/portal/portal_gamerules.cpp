@@ -72,6 +72,7 @@ IMPLEMENT_NETWORKCLASS_ALIASED( PortalGameRulesProxy, DT_PortalGameRulesProxy )
 #endif
 
 
+extern ConVar	physcannon_mega_enabled;
 extern ConVar	sv_robust_explosions;
 extern ConVar	sk_allow_autoaim;
 extern ConVar	sk_autoaim_scale1;
@@ -1245,6 +1246,16 @@ static ConCommand ent_create_portal_metal_sphere("ent_create_portal_metal_sphere
 	void CPortalGameRules::Think( void )
 	{
 		BaseClass::Think();
+
+		if( physcannon_mega_enabled.GetBool() == true )
+		{
+			m_bMegaPhysgun = true;
+		}
+		else
+		{
+			// FIXME: Is there a better place for this?
+			m_bMegaPhysgun = ( GlobalEntity_GetState("super_phys_gun") == GLOBAL_ON );
+		}
 	}
 
 	//-----------------------------------------------------------------------------
