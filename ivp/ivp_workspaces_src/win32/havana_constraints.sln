@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "havana_constraints", "havana_constraints.vcproj", "{E89142B2-E843-4003-9368-669CEC4C120F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+		SDK MultiThreaded|Win32 = SDK MultiThreaded|Win32
+		SDK SingleThreaded|Win32 = SDK SingleThreaded|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E89142B2-E843-4003-9368-669CEC4C120F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E89142B2-E843-4003-9368-669CEC4C120F}.Debug|Win32.Build.0 = Debug|Win32
+		{E89142B2-E843-4003-9368-669CEC4C120F}.Release|Win32.ActiveCfg = Release|Win32
+		{E89142B2-E843-4003-9368-669CEC4C120F}.Release|Win32.Build.0 = Release|Win32
+		{E89142B2-E843-4003-9368-669CEC4C120F}.SDK MultiThreaded|Win32.ActiveCfg = SDK MultiThreaded|Win32
+		{E89142B2-E843-4003-9368-669CEC4C120F}.SDK MultiThreaded|Win32.Build.0 = SDK MultiThreaded|Win32
+		{E89142B2-E843-4003-9368-669CEC4C120F}.SDK SingleThreaded|Win32.ActiveCfg = SDK SingleThreaded|Win32
+		{E89142B2-E843-4003-9368-669CEC4C120F}.SDK SingleThreaded|Win32.Build.0 = SDK SingleThreaded|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

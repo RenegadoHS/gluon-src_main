@@ -1,0 +1,22 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xbox_loader", "xbox_loader.vcproj", "{652C7D60-BC02-4E09-96DD-9300FFFF3403}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug_XBox|Default = Debug_XBox|Default
+		Release_XBox|Default = Release_XBox|Default
+		Retail_XBox|Default = Retail_XBox|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{652C7D60-BC02-4E09-96DD-9300FFFF3403}.Debug_XBox|Default.ActiveCfg = Debug_XBox|Xbox
+		{652C7D60-BC02-4E09-96DD-9300FFFF3403}.Debug_XBox|Default.Build.0 = Debug_XBox|Xbox
+		{652C7D60-BC02-4E09-96DD-9300FFFF3403}.Release_XBox|Default.ActiveCfg = Release_XBox|Xbox
+		{652C7D60-BC02-4E09-96DD-9300FFFF3403}.Release_XBox|Default.Build.0 = Release_XBox|Xbox
+		{652C7D60-BC02-4E09-96DD-9300FFFF3403}.Retail_XBox|Default.ActiveCfg = Retail_XBox|Xbox
+		{652C7D60-BC02-4E09-96DD-9300FFFF3403}.Retail_XBox|Default.Build.0 = Retail_XBox|Xbox
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

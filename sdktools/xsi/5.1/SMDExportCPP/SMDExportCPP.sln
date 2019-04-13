@@ -1,0 +1,35 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SMDExport", "SMDExportCPP.vcproj", "{B28FA65F-AA52-45AE-819B-5770CE640F4A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HelperBoneOp", "..\HelperBoneOp\HelperBoneOp.vcproj", "{46DE9980-387F-4EA6-ACBC-ACC8B18EAC32}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug UNICODE x86|Win32 = Debug UNICODE x86|Win32
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+		Ship UNICODE x86|Win32 = Ship UNICODE x86|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B28FA65F-AA52-45AE-819B-5770CE640F4A}.Debug UNICODE x86|Win32.ActiveCfg = Debug|Win32
+		{B28FA65F-AA52-45AE-819B-5770CE640F4A}.Debug UNICODE x86|Win32.Build.0 = Debug|Win32
+		{B28FA65F-AA52-45AE-819B-5770CE640F4A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B28FA65F-AA52-45AE-819B-5770CE640F4A}.Debug|Win32.Build.0 = Debug|Win32
+		{B28FA65F-AA52-45AE-819B-5770CE640F4A}.Release|Win32.ActiveCfg = Release|Win32
+		{B28FA65F-AA52-45AE-819B-5770CE640F4A}.Release|Win32.Build.0 = Release|Win32
+		{B28FA65F-AA52-45AE-819B-5770CE640F4A}.Ship UNICODE x86|Win32.ActiveCfg = Release|Win32
+		{B28FA65F-AA52-45AE-819B-5770CE640F4A}.Ship UNICODE x86|Win32.Build.0 = Release|Win32
+		{46DE9980-387F-4EA6-ACBC-ACC8B18EAC32}.Debug UNICODE x86|Win32.ActiveCfg = Debug|Win32
+		{46DE9980-387F-4EA6-ACBC-ACC8B18EAC32}.Debug UNICODE x86|Win32.Build.0 = Debug|Win32
+		{46DE9980-387F-4EA6-ACBC-ACC8B18EAC32}.Debug|Win32.ActiveCfg = Debug|Win32
+		{46DE9980-387F-4EA6-ACBC-ACC8B18EAC32}.Debug|Win32.Build.0 = Debug|Win32
+		{46DE9980-387F-4EA6-ACBC-ACC8B18EAC32}.Release|Win32.ActiveCfg = Release|Win32
+		{46DE9980-387F-4EA6-ACBC-ACC8B18EAC32}.Release|Win32.Build.0 = Release|Win32
+		{46DE9980-387F-4EA6-ACBC-ACC8B18EAC32}.Ship UNICODE x86|Win32.ActiveCfg = Debug|Win32
+		{46DE9980-387F-4EA6-ACBC-ACC8B18EAC32}.Ship UNICODE x86|Win32.Build.0 = Debug|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

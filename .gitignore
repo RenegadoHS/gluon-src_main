@@ -17,11 +17,7 @@ ipch
 *.opensdf
 *.idb
 *.ncb
-*.vc*proj*
-*.vcxproj*
-*.vcxproj
 *.filters
-*.sln*
 *.htm
 *.aps
 *.dll
