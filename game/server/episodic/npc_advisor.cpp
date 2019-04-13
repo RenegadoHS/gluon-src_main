@@ -30,7 +30,25 @@
 // #include "mathlib/noise.h"
 
 // this file contains the definitions for the message ID constants (eg ADVISOR_MSG_START_BEAM etc)
-#include "npc_advisor_shared.h"
+//FIXME: Doesn't work on Episode 3 (HL: Tribute)
+//#include "npc_advisor_shared.h"
+//bad fix
+#define NPC_ADVISOR_HAS_BEHAVIOR 0
+
+#if NPC_ADVISOR_HAS_BEHAVIOR
+// Message ID constants used for communciation between client and server.
+enum 
+{
+	ADVISOR_MSG_START_BEAM = 10,
+	ADVISOR_MSG_STOP_BEAM,
+	ADVISOR_MSG_STOP_ALL_BEAMS,
+	ADVISOR_MSG_START_ELIGHT,
+	ADVISOR_MSG_STOP_ELIGHT,
+};
+#endif
+
+//end bad fix
+
 
 // memdbgon must be the last include file in a .cpp file!!!
 #include "tier0/memdbgon.h"

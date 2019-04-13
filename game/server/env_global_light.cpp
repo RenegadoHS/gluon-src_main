@@ -110,7 +110,7 @@ END_SEND_TABLE()
 CGlobalLight::CGlobalLight()
 {
 	// probably should not use this texture lol
-	Q_strcpy( m_TextureName.GetForModify(), "effects/flashlight001" );
+	Q_strcpy( m_TextureName.GetForModify(), "effects/softlight001" );
 	//m_LightColor.Init( 255, 255, 255, 1 );
 	m_LinearFloatLightColor.Init( 1.0f, 1.0f, 1.0f );
 	//m_flColorTransitionTime = 0.5f;
@@ -150,7 +150,6 @@ bool CGlobalLight::KeyValue( const char *szKeyName, const char *szValue )
 	{
 		/*float tmp[4];
 		UTIL_StringToFloatArray( tmp, 4, szValue );
-
 		m_LightColor.SetR( tmp[0] );
 		m_LightColor.SetG( tmp[1] );
 		m_LightColor.SetB( tmp[2] );

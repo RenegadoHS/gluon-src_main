@@ -24,15 +24,15 @@ ConVar cl_globallight_freeze( "cl_globallight_freeze", "0" );
 ConVar cl_globallight_xoffset( "cl_globallight_xoffset", "0" ); //-800
 ConVar cl_globallight_yoffset( "cl_globallight_yoffset", "0" ); //1600
 
-ConVar cl_globallight_drawfrustum( "cl_globallight_drawfrustum", "0" );
-ConVar cl_globallight_size( "cl_globallight_size", "5000" );
+ConVar cl_globallight_drawfrustum( "cl_globallight_drawfrustum", "1" );
+ConVar cl_globallight_size( "cl_globallight_size", "1000" );
 
 // temp until ortho is added
 ConVar cl_globallight_fov( "cl_globallight_fov", "14" );
 
-ConVar cl_globallight_filtersize( "cl_globallight_filtersize", "0.08" );
-ConVar cl_globallight_slopescale( "cl_globallight_slopescale", "16" );
-ConVar cl_globallight_depthbias( "cl_globallight_depthbias", "0.000001" ); //0.02
+ConVar cl_globallight_filtersize( "cl_globallight_filtersize", "0.5" );
+ConVar cl_globallight_slopescale( "cl_globallight_slopescale", "1" );
+ConVar cl_globallight_depthbias( "cl_globallight_depthbias", "0.000000001" ); //0.02
 
 ConVar cl_globallight_r( "cl_globallight_r", "0.5" );
 ConVar cl_globallight_g( "cl_globallight_g", "0.5" );
@@ -149,11 +149,9 @@ void C_GlobalLight::ClientThink()
 	{
 		/*Vector vLinearFloatLightColor( m_LightColor.r, m_LightColor.g, m_LightColor.b );
 		float flLinearFloatLightAlpha = m_LightColor.a;
-
 		if ( m_CurrentLinearFloatLightColor != vLinearFloatLightColor || m_flCurrentLinearFloatLightAlpha != flLinearFloatLightAlpha )
 		{
 			float flColorTransitionSpeed = gpGlobals->frametime * m_flColorTransitionTime * 255.0f;
-
 			m_CurrentLinearFloatLightColor.x = Approach( vLinearFloatLightColor.x, m_CurrentLinearFloatLightColor.x, flColorTransitionSpeed );
 			m_CurrentLinearFloatLightColor.y = Approach( vLinearFloatLightColor.y, m_CurrentLinearFloatLightColor.y, flColorTransitionSpeed );
 			m_CurrentLinearFloatLightColor.z = Approach( vLinearFloatLightColor.z, m_CurrentLinearFloatLightColor.z, flColorTransitionSpeed );
@@ -234,7 +232,6 @@ void C_GlobalLight::ClientThink()
 		//state.m_bGlobalLight = true;
 
 		/*float flOrthoSize = 1000.0f;
-
 		if ( flOrthoSize > 0 )
 		{
 			state.m_bOrtho = true;

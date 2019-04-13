@@ -430,8 +430,8 @@ void CShaderDeviceMgrDx8::CheckVendorDependentAlphaToCoverage( HardwareCaps_t *p
 }
 
 ConVar mat_hdr_level( "mat_hdr_level", "2" );
-ConVar mat_slopescaledepthbias_shadowmap( "mat_slopescaledepthbias_shadowmap", "16", FCVAR_CHEAT );
-ConVar mat_depthbias_shadowmap(	"mat_depthbias_shadowmap", "0.0005", FCVAR_CHEAT  );
+ConVar mat_slopescaledepthbias_shadowmap( "mat_slopescaledepthbias_shadowmap", "1", FCVAR_CHEAT );
+ConVar mat_depthbias_shadowmap(	"mat_depthbias_shadowmap", "0.00001", FCVAR_CHEAT  );
 
 //-----------------------------------------------------------------------------
 // Determine capabilities

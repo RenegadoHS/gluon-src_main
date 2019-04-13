@@ -155,6 +155,7 @@ $Project "stdshader_dx9"
 		$File	"ssao_combine.cpp"
 		$File	"gaussian_blur_3x3.cpp"
 		$File	"pbr_dx9.cpp"
+		$File	"parallaxtest.cpp"
 
 		$Folder	"Remove me when VAC2 is out" [$WIN32]
 		{

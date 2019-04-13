@@ -392,6 +392,15 @@ public:
 		// Pull data from parameters
 		CSoundParameters params;
 
+		//HACKHACK: Not optimal
+		if ( !enginesound->IsSoundPrecached( params.soundname ) )
+		{
+			Msg( "Sound %%s was not precached\n", params.soundname );
+			Msg( "Doing yet another experimental late precache!" );
+			enginesound->PrecacheSound( params.soundname, true );
+		}
+		
+		
 		// Try to deduce the actor's gender
 		gender_t gender = GENDER_NONE;
 		CBaseEntity *ent = CBaseEntity::Instance( entindex );

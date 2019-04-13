@@ -157,6 +157,7 @@ $Group "pcgame" "source"
 
 $Group "everything"
 {
+	"AppChooser"
 	"actbusy"
 	"adminserver"
 	"appframework"

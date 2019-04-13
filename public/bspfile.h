@@ -45,7 +45,7 @@
 
 // upper design bounds
 #define MIN_MAP_DISP_POWER		2	// Minimum and maximum power a displacement can be.
-#define MAX_MAP_DISP_POWER		4	
+#define MAX_MAP_DISP_POWER		4   // Must be 4 or else array issues arrise (64 bit can fix this)
 
 // Max # of neighboring displacement touching a displacement's corner.
 #define MAX_DISP_CORNER_NEIGHBORS	4

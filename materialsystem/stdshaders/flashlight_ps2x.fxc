@@ -32,6 +32,9 @@ const float4 g_EyePos						: register( PSREG_EYEPOS_SPEC_EXPONENT );
 const float4 g_FlashlightAttenuation		: register( PSREG_FLASHLIGHT_ATTENUATION );
 const float4 g_DetailConstants				: register( c0 );
 
+const float4 g_vFlashlightAttenuationFactors	: register( c7 ); // FarZ in w
+const float3 g_vFlashlightPos					: register( c8 );
+
 sampler SpotSampler							: register( s0 );
 sampler BaseTextureSampler					: register( s1 );
 sampler NormalizingCubemapSampler			: register( s2 );
@@ -111,7 +114,7 @@ float4 main( PS_INPUT i ) : COLOR
 	[branch]
 	if ( dot(ltz + gto, float3(1,1,1)) > 0 )
 	{
-		clip (-1);
+	clip (-1);
 		return float4(0,0,0,0);
 	}
 	else
@@ -125,7 +128,7 @@ float4 main( PS_INPUT i ) : COLOR
 			return float4(0,0,0,0);
 		}
 		else
-		{
+	{
 #else
 	spotColor = tex2D( SpotSampler, vProjCoords );
 #endif
@@ -175,12 +178,14 @@ float4 main( PS_INPUT i ) : COLOR
 	spotColor.rgb *= cFlashlightColor.rgb;
 
 	// Compute per-pixel distance attenuation
-	float3 delta = g_EyePos.xyz - i.worldPos_worldTransition.xyz;
+//	float3 delta = g_EyePos.xyz - i.worldPos_worldTransition.xyz; //THIS IS THE SHIT THAT FUCKS WITH ATTENUATION
+//	float3 delta = g_vFlashlightAttenuationFactors.xyz - g_vFlashlightPos.xyz;
+	float3 delta = g_vFlashlightAttenuationFactors.xyz - i.worldPos_worldTransition.xyz;
 	float distSquared = dot( delta, delta );
 	float dist = sqrt( distSquared );
 	float farZ = g_FlashlightAttenuation.w;
 	float endFalloffFactor = RemapValClamped( dist, farZ, 0.6f * farZ, 0.0f, 1.0f );
-	float flAtten = saturate(endFalloffFactor * dot( g_FlashlightAttenuation.xyz, float3( 1.0f, 1.0f/dist, 1.0f/distSquared ) ) );
+	float flAtten = saturate(endFalloffFactor * dot( g_FlashlightAttenuation.xyz, float3( g_vFlashlightAttenuationFactors.w, 1.0f/dist, 1.0f/distSquared ) ) );
 
 #if FLASHLIGHTSHADOWS && ( defined( SHADER_MODEL_PS_2_B ) || defined( SHADER_MODEL_PS_3_0 ) )
 	float flShadow = DoFlashlightShadow( FlashlightDepthSampler, RandomRotationSampler, vProjCoords, i.projPos.xy / i.projPos.z, FLASHLIGHTDEPTHFILTERMODE, g_vShadowTweaks, false );
@@ -223,7 +228,8 @@ float4 main( PS_INPUT i ) : COLOR
 	outColor = spotColor * baseColor.xyz * saturate( nDotL );
 	outColor *= flAtten;
 
-	float fogFactor = CalcPixelFogFactor( PIXELFOGTYPE, g_FogParams, g_EyePos.z, i.worldPos_worldTransition.z, i.projPos.z );
+//	float fogFactor = CalcPixelFogFactor( PIXELFOGTYPE, g_FogParams, g_vFlashlightPos.z, g_vFlashlightAttenuationFactors.w, i.projPos.z );
+	float fogFactor = CalcPixelFogFactor( PIXELFOGTYPE, g_FogParams, g_vFlashlightPos.z, i.worldPos_worldTransition.z, i.projPos.z );
 	return FinalOutput( float4(outColor, baseColor.a) , fogFactor, PIXELFOGTYPE, TONEMAP_SCALE_LINEAR );
 
 	// so we can jump over all of the above

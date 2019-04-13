@@ -587,7 +587,7 @@ bool CHardwareConfig::SupportsShaderModel_3_0() const
 
 int CHardwareConfig::GetShadowFilterMode() const
 {
-	/*if ( !m_Caps.m_bSupportsShadowDepthTextures || !ShaderUtil()->GetConfig().ShadowDepthTexture() )
+	if ( !m_Caps.m_bSupportsShadowDepthTextures || !ShaderUtil()->GetConfig().ShadowDepthTexture() )
 		return 0;
 
 	switch ( m_Caps.m_ShadowDepthTextureFormat )
@@ -616,10 +616,9 @@ int CHardwareConfig::GetShadowFilterMode() const
 			return 0;
 	}
 
-	*/
-	return 0;
 	
-	//return NVIDIA_GAUSSIAN;
+	return 0;
+
 }
 
 static ConVar r_shader_srgb( "r_shader_srgb", "0", 0, "-1 = use hardware caps. 0 = use hardware srgb. 1 = use shader srgb(software lookup)" );		// -1=use caps 0=off 1=on

@@ -1,1 +1,1 @@
-devtools\bin\vpc +everything -blobulator -ifm -lua -vphysics -parsifal -phonemeextractor_ims -phonemeextractor -ivp_physics -cardstats -havana_constraints -hk_base -hk_math -ivp_compactbuilder -soundsystem -VAudio_Miles -sfmgen -sfmobjects /hl2 /cstrike /dod /hl2mp /episodic /tf /portal /hl1 /lostcoast /v
+devtools\bin\vpc +everything -blobulator -ifm -lua -physics -parsifal -phonemeextractor_ims -phonemeextractor -cardstats -VAudio_Miles -sfmobjects /hl2 /episodic /tf /portal /X360 /V

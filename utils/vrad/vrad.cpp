@@ -48,7 +48,7 @@ entity_t	*face_entity[MAX_MAP_FACES];
 Vector		face_offset[MAX_MAP_FACES];		// for rotating bmodels
 int			fakeplanes;
 
-unsigned	numbounce = 100; // 25; /* Originally this was 8 */
+unsigned	numbounce = 150; // 25; /* Originally this was 8 */
 
 float		maxchop = 4; // coarsest allowed number of luxel widths for a patch
 float		minchop = 4; // "-chop" tightest number of luxel widths for a patch, used on edges
@@ -114,9 +114,9 @@ qboolean	g_bLowPriority = false;
 qboolean	g_bLogHashData = false;
 bool		g_bNoDetailLighting = false;
 double		g_flStartTime;
-bool		g_bStaticPropLighting = false;
-bool        g_bStaticPropPolys = false;
-bool        g_bTextureShadows = false;
+bool		g_bStaticPropLighting = true; //used to be false, now putting it as true to make it nicer.
+bool        g_bStaticPropPolys = true; //used to be false, now putting it as true to make it nicer.
+bool        g_bTextureShadows = true; //used to be false, now putting it as true to make it nicer.
 bool        g_bDisablePropSelfShadowing = false;
 
 

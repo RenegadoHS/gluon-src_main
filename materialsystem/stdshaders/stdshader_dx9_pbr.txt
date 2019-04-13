@@ -2,3 +2,5 @@
 
 pbr_vs20.fxc
 pbr_ps30.fxc
+
+flashlight_ps2x.fxc
