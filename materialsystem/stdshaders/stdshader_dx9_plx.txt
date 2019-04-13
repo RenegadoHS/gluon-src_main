@@ -1,0 +1,4 @@
+// Parallax Shaders
+
+parallaxtest_ps30.fxc
+parallaxtest_vs30.fxc

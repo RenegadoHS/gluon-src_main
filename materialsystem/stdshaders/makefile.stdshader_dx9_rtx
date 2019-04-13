@@ -1,0 +1,9 @@
+default:  fxctmp9_tmp\raytracing_vs20.inc fxctmp9_tmp\raytracing_ps30.inc shaders\fxc\raytracing_ps30.vcs
+
+fxctmp9_tmp\raytracing_vs20.inc :  raytracing_vs20.fxc common_pragmas.h common_fxc.h common_hlsl_cpp_consts.h common_vs_fxc.h
+	perl ..\..\devtools\bin\fxc_prep.pl -novcs   -source "..\.." raytracing_vs20.fxc-----raytracing_vs20
+
+fxctmp9_tmp\raytracing_ps30.inc shaders\fxc\raytracing_ps30.vcs: raytracing_ps30.fxc 
+	perl ..\..\devtools\bin\fxc_prep.pl   -source "..\.." raytracing_ps30.fxc-----raytracing_ps30
+	echo raytracing_ps30.fxc>> filestocopy.txt
+

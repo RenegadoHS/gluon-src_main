@@ -1,0 +1,14 @@
+default:  fxctmp9_tmp\parallaxtest_ps30.inc shaders\fxc\parallaxtest_ps30.vcs fxctmp9_tmp\parallaxtest_vs30.inc shaders\fxc\parallaxtest_vs30.vcs
+
+fxctmp9_tmp\parallaxtest_ps30.inc shaders\fxc\parallaxtest_ps30.vcs: parallaxtest_ps30.fxc 
+	perl ..\..\devtools\bin\fxc_prep.pl   -source "..\.." parallaxtest_ps30.fxc-----parallaxtest_ps30
+	echo parallaxtest_ps30.fxc>> filestocopy.txt
+
+fxctmp9_tmp\parallaxtest_vs30.inc shaders\fxc\parallaxtest_vs30.vcs: parallaxtest_vs30.fxc common_fxc.h common_pragmas.h common_vs_fxc.h common_hlsl_cpp_consts.h
+	perl ..\..\devtools\bin\fxc_prep.pl   -source "..\.." parallaxtest_vs30.fxc-----parallaxtest_vs30
+	echo parallaxtest_vs30.fxc>> filestocopy.txt
+	echo common_fxc.h>> filestocopy.txt
+	echo common_pragmas.h>> filestocopy.txt
+	echo common_vs_fxc.h>> filestocopy.txt
+	echo common_hlsl_cpp_consts.h>> filestocopy.txt
+
