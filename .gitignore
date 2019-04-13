@@ -20,8 +20,6 @@ ipch
 *.filters
 *.htm
 *.aps
-*.dll
-*.exe
 *.lib
 *.db
 *.opendb
