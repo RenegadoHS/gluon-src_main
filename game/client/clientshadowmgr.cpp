@@ -96,7 +96,7 @@ static ConVar r_shadowrendertotexture( "r_shadowrendertotexture", "0" );
 static ConVar r_flashlight_version2( "r_flashlight_version2", "0" );
 void WorldLightCastShadowCallback(IConVar *pVar, const char *pszOldValue, float flOldValue);
 static ConVar r_worldlight_castshadows( "r_worldlight_castshadows", "1", FCVAR_CHEAT, "Allow world lights to cast shadows", true, 0, true, 1, WorldLightCastShadowCallback );
-static ConVar r_worldlight_lerptime( "r_worldlight_lerptime", "0.5", FCVAR_CHEAT );
+static ConVar r_worldlight_lerptime( "r_worldlight_lerptime", "0.2", FCVAR_CHEAT );
 static ConVar r_worldlight_debug( "r_worldlight_debug", "0", FCVAR_CHEAT );
 static ConVar r_worldlight_shortenfactor( "r_worldlight_shortenfactor", "2" , FCVAR_CHEAT, "Makes shadows cast from local lights shorter" );
 static ConVar r_worldlight_mincastintensity( "r_worldlight_mincastintensity", "0.3", FCVAR_CHEAT, "Minimum brightness of a light to be classed as shadow casting", true, 0, false, 0 );
@@ -106,7 +106,7 @@ ConVar r_flashlightdepthtexture( "r_flashlightdepthtexture", "1" );
 #if defined( _X360 )
 ConVar r_flashlightdepthres( "r_flashlightdepthres", "512" );
 #else
-ConVar r_flashlightdepthres( "r_flashlightdepthres", "4096" );
+ConVar r_flashlightdepthres( "r_flashlightdepthres", "6144" );
 #endif
 
 ConVar r_threaded_client_shadow_manager( "r_threaded_client_shadow_manager", "0" );
