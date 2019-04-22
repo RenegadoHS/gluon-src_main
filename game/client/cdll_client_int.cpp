@@ -94,6 +94,8 @@
 #include "discord_rpc.h"
 #include <time.h>
 
+#include "mathlib/IceKey.H"
+
 #ifdef PORTAL
 #include "PortalRender.h"
 #endif
@@ -221,6 +223,21 @@ ISaveRestoreBlockHandler *GetViewEffectsRestoreBlockHandler();
 CUtlLinkedList<CDataChangedEvent, unsigned short> g_DataChangedEvents;
 ClientFrameStage_t g_CurFrameStage = FRAME_UNDEFINED;
 
+//rawr encryption start
+char *encrypt(char *fak)
+{
+	return fak;
+}
+
+void rawrtest_f ( const CCommand &args )
+{
+	Msg( encrypt("urmomgay") );
+}
+ 
+ConCommand rawrtest( "rawrtest", rawrtest_f , "rawr", 0);
+//rawr encryption end
+
+
 
 class IMoveHelper;
 
@@ -228,6 +245,7 @@ void DispatchHudText( const char *pszName );
 
 const ConVar *hostip;
 const ConVar *hostname;
+ConVar *name;
 const ConVar *maxplayers;
 static ConVar s_CV_ShowParticleCounts("showparticlecounts", "0", 0, "Display number of particles drawn per frame");
 static ConVar s_cl_team("cl_team", "default", FCVAR_USERINFO|FCVAR_ARCHIVE, "Default team when joining a game");
@@ -655,6 +673,8 @@ char *getJoinSecret() {
 
 	//Q_strncpy( ent.m_ModelName, modelinfo->GetModelName( pEnt->GetModel() ), sizeof( ent.m_ModelName ) );
     Q_strncpy( x, hostip->GetString(), 128 );
+	x = encrypt(x);
+	DevMsg(x);
     return x;
 }
 
@@ -708,10 +728,18 @@ char *getGameName() {
 
 static void HandleDiscordReady(const DiscordUser* connectedUser)
 {
+	name = cvar->FindVar("name");
+	name->SetValue(connectedUser->username);
+	char dUsr[256];
+	Q_snprintf( dUsr, sizeof(dUsr), "name %s", connectedUser->username); // bad way to do it
+	engine->ClientCmd( dUsr ); // bad way to do it
 	DevMsg("Discord: Connected to user %s#%s - %s\n",
 		connectedUser->username,
 		connectedUser->discriminator,
 		connectedUser->userId);
+	encrypt("urmom");
+	encrypt("gay");
+	encrypt("gayfafadf");
 }
 
 static void HandleDiscordDisconnected(int errcode, const char* message)
