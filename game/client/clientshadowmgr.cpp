@@ -106,7 +106,7 @@ ConVar r_flashlightdepthtexture( "r_flashlightdepthtexture", "1" );
 #if defined( _X360 )
 ConVar r_flashlightdepthres( "r_flashlightdepthres", "512" );
 #else
-ConVar r_flashlightdepthres( "r_flashlightdepthres", "6144" );
+ConVar r_flashlightdepthres( "r_flashlightdepthres", "7164" );
 #endif
 
 ConVar r_threaded_client_shadow_manager( "r_threaded_client_shadow_manager", "0" );
@@ -3490,8 +3490,8 @@ void CClientShadowMgr::AddShadowToReceiver( ClientShadowHandle_t handle,
 
 	// Don't bother if this renderable doesn't receive shadows or light from flashlights
 	//if( !pRenderable->ShouldReceiveProjectedTextures( SHADOW_FLAGS_PROJECTED_TEXTURE_TYPE_MASK ) )
-	if( !pRenderable->ShouldReceiveProjectedTextures( SHADOW_FLAGS_PROJECTED_TEXTURE_TYPE_MASK ) )
-		return;
+	//if( !pRenderable->ShouldReceiveProjectedTextures( SHADOW_FLAGS_PROJECTED_TEXTURE_TYPE_MASK ) )
+	//	return;
 
 	// Cull if the origin is on the wrong side of a shadow clip plane....
 	if ( CullReceiver( handle, pRenderable, pSourceRenderable ) )
@@ -3573,8 +3573,8 @@ void CClientShadowMgr::RemoveAllShadowsFromReceiver(
 					IClientRenderable* pRenderable, ShadowReceiver_t type )
 {
 	// Don't bother if this renderable doesn't receive shadows
-	if ( !pRenderable->ShouldReceiveProjectedTextures( SHADOW_FLAGS_PROJECTED_TEXTURE_TYPE_MASK ) )
-		return;
+	//if ( !pRenderable->ShouldReceiveProjectedTextures( SHADOW_FLAGS_PROJECTED_TEXTURE_TYPE_MASK ) )
+	//	return;
 
 	// Do different things depending on the receiver type
 	switch( type )

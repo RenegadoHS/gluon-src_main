@@ -407,10 +407,10 @@ struct FlashlightState_t
 	{
 		m_bEnableShadows = true;						// Provide reasonable defaults for shadow depth mapping parameters
 		m_bDrawShadowFrustum = false;
-		m_flShadowMapResolution = 6144.0f;
-		m_flShadowFilterSize = 0.1f;
+		m_flShadowMapResolution = 7164.0f;
+		m_flShadowFilterSize = 0.05f;
 		m_flShadowSlopeScaleDepthBias = 1.0f;
-		m_flShadowDepthBias = 0.00001f;
+		m_flShadowDepthBias = 0.0f;
 		m_flShadowJitterSeed = 0.0f;
 		m_flShadowAtten = 0.0f;
 		m_bScissor = false; 
