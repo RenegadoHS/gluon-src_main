@@ -1,0 +1,96 @@
+//-----------------------------------------------------------------------------
+//	SHADERAPIVK.VPC
+//
+//	Project Script
+//-----------------------------------------------------------------------------
+
+$Macro SRCDIR		"..\.."
+$Macro OUTBINDIR	"$SRCDIR\..\game\bin"
+$Macro OUTBINNAME	"shaderapivk"
+
+$Include "$SRCDIR\vpc_scripts\source_dll_win32_base.vpc"
+
+// Common Configuration
+$Configuration
+{
+	$Compiler
+	{
+		//$AdditionalIncludeDirectories	"$BASE;$SRCDIR\dx9sdk\include;..\"
+		$PreprocessorDefinitions		"$BASE;SHADERAPIVK;SHADER_DLL_EXPORT;PROTECTED_THINGS_ENABLE;strncpy=use_Q_strncpy_instead;_snprintf=use_Q_snprintf_instead"
+
+//		$AdditionalOptions		"/FC"
+	}
+}
+
+$Configuration "Debug"
+{
+	$Linker [$X360]
+	{
+		$AdditionalDependencies		"$BASE d3dx9d.lib xuirund.lib xuirenderd.lib"
+	}
+}
+
+$Configuration "Release"
+{
+	$Linker [$X360]
+	{
+		$AdditionalDependencies		"$BASE d3dx9.lib xuirun.lib xuirender.lib"
+	}
+}
+
+$Project "shaderapivk"
+{
+	$Folder	"Public Header Files"
+	{
+		$File	"$SRCDIR\public\shaderapi\ishaderdevice.h"
+		$File	"$SRCDIR\public\shaderapi\ishaderutil.h"
+		$File	"$SRCDIR\public\shaderapi\ishaderapi.h"
+		$File	"$SRCDIR\public\shaderapi\ishaderdynamic.h"
+		$File	"$SRCDIR\public\shaderapi\ishadershadow.h"
+		$File	"$SRCDIR\public\materialsystem\idebugtextureinfo.h"
+		$File	"$SRCDIR\public\materialsystem\ivballoctracker.h"
+		$File	"$SRCDIR\public\materialsystem\shader_vcs_version.h"
+	}
+
+	$Folder	"Source Files"
+	{
+		$Folder "App System"
+		{
+			$File "shaderdevicemgr.h"
+			$File "shaderdevicemgr.cpp"
+ 		}
+		$Folder "Device / Renderer"
+		{
+            		$File "shaderapivk_global.h"
+			$File "shaderapivk.h"
+			$File "shaderapivk.cpp"
+			$File "shaderdevice.h"
+			$File "shaderdevice.cpp"
+			$File "shaderrender.h"
+			$File "shaderrender.cpp"
+		}
+		$Folder "MeshBuffer"
+		{
+			$File "meshimpl.h"
+			$File "meshimpl.cpp"
+			$File "vertexbufferimpl.h"
+			$File "vertexbufferimpl.cpp"
+			$File "indexbufferimpl.h"
+			$File "indexbufferimpl.cpp"
+		}
+		$Folder "Vulkan Callbacks"
+		{
+			$File "vulkanimpl.h"
+			$File "vulkanimpl.cpp"
+		}
+        $File "shaderapi_global.h"
+	}
+
+	$Folder	"Link Libraries"
+	{
+		$File	"$SRCDIR\lib\public\bitmap.lib"
+		$File	"$SRCDIR\lib\public\mathlib.lib"
+		$File	"$SRCDIR\lib\public\tier2.lib"
+		$File	"$SRCDIR\lib\public\vulkan-1.lib"
+	}
+}

@@ -228,6 +228,7 @@ void DispatchHudText( const char *pszName );
 
 const ConVar *hostip;
 const ConVar *hostname;
+const ConVar *maxplayers;
 static ConVar s_CV_ShowParticleCounts("showparticlecounts", "0", 0, "Display number of particles drawn per frame");
 static ConVar s_cl_team("cl_team", "default", FCVAR_USERINFO|FCVAR_ARCHIVE, "Default team when joining a game");
 static ConVar s_cl_class("cl_class", "default", FCVAR_USERINFO|FCVAR_ARCHIVE, "Default class when joining a game");
@@ -630,6 +631,81 @@ bool IsEngineThreaded()
 //-----------------------------------------------------------------------------
 // Discord RPC
 //-----------------------------------------------------------------------------
+
+const char *COM_GetModDirectory_2()
+{
+	static char modDir[MAX_PATH];
+	if ( Q_strlen( modDir ) == 0 )
+	{
+		const char *gamedir = CommandLine()->ParmValue("-game", CommandLine()->ParmValue( "-defaultgamedir", "hl2" ) );
+		Q_strncpy( modDir, gamedir, sizeof(modDir) );
+		if ( strchr( modDir, '/' ) || strchr( modDir, '\\' ) )
+		{
+			Q_StripLastDir( modDir, sizeof(modDir) );
+			int dirlen = Q_strlen( modDir );
+			Q_strncpy( modDir, gamedir + dirlen, sizeof(modDir) - dirlen );
+		}
+	}
+
+	return modDir;
+}
+
+char *getJoinSecret() {
+    char *x = (char *)malloc( sizeof( char ) * 128 );
+
+	//Q_strncpy( ent.m_ModelName, modelinfo->GetModelName( pEnt->GetModel() ), sizeof( ent.m_ModelName ) );
+    Q_strncpy( x, hostip->GetString(), 128 );
+    return x;
+}
+
+char *getGameName() {
+    char *x = (char *)malloc( sizeof( char ) * 128 );
+
+	const char * gameName = COM_GetModDirectory_2();
+	if ( !V_stricmp( gameName, "portal" ) )
+	{
+		x = "Portal";
+	}
+	else if ( !V_stricmp( gameName, "hl2" ) )
+	{
+		x = "Half-Life 2";
+	}
+	else if ( !V_stricmp( gameName, "episodic" ) )
+	{
+		x = "HL2: Episode One";
+	}
+	else if ( !V_stricmp( gameName, "ep2" ) )
+	{
+		x = "HL2: Episode Two";
+	}
+	else if ( !V_stricmp( gameName, "hl1" ) )
+	{
+		x = "Half-Life 1";
+	}
+	else if ( !V_stricmp( gameName, "hl2mp" ) )
+	{
+		x = "Half-Life 2: DM";
+	}
+	else if ( !V_stricmp( gameName, "cstrike" ) )
+	{
+		x = "Counter-Strike: Source";
+	}
+	else if ( !V_stricmp( gameName, "tf" ) )
+	{
+		x = "Team-Fortress 2";
+	}
+	else if ( !V_stricmp( gameName, "ep3" ) )
+	{
+		x = "Half-Life: Tribute";
+	}
+	else
+	{
+		x = "Custom Mod";
+	}
+	
+    return x;
+}
+
 static void HandleDiscordReady(const DiscordUser* connectedUser)
 {
 	DevMsg("Discord: Connected to user %s#%s - %s\n",
@@ -659,7 +735,7 @@ static void HandleDiscordJoin(const char* secret)
 
 static void HandleDiscordSpectate(const char* secret)
 {
-	// Not implemented yet
+	// Not implemented yet (Needs Discord approval)
 	DevMsg("Discord: Spectate (%s)n", secret); 
 }
 
@@ -1298,19 +1374,24 @@ void CHLClient::LevelInitPreEntity( char const* pMapName )
 		char buffer[256];
 		hostip = cvar->FindVar( "hostip" );
 		hostname = cvar->FindVar( "hostname" );
+		maxplayers = cvar->FindVar( "maxplayers" );
 		if(strcmp(hostip->GetString(), "") == 0)
 		{
-			discordPresence.state = "Single-Player";
+			discordPresence.state = getGameName();
 		}
 		else
 		{
 			discordPresence.state = hostname->GetString();
+			discordPresence.partyId = hostip->GetString();
+			discordPresence.partySize = 1;
+			discordPresence.partyMax = 5;
+			discordPresence.joinSecret = "TI4NzM0OjFpMmhuZToxMjMxMjM=";
 		}
 		sprintf(buffer, "Map: %s", pMapName);
 		discordPresence.details = buffer;
 		discordPresence.startTimestamp = startTimestamp;
 		discordPresence.largeImageKey = "in-game";
-		discordPresence.joinSecret = hostip->GetString();
+		//discordPresence.joinSecret = hostip->GetString();
 		Discord_UpdatePresence(&discordPresence);
 	}
 

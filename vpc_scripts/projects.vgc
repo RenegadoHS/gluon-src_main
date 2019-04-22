@@ -810,6 +810,11 @@ $Project "shaderapidx10"
 	"materialsystem\shaderapidx9\shaderapidx10.vpc" [$WIN32]
 }
 
+$Project "shaderapivk"
+{
+	"materialsystem\shaderapivk\shaderapivk.vpc" [$WIN32]
+}
+
 $Project "shaderapiempty"
 {
 	"materialsystem\shaderapiempty\shaderapiempty.vpc" [$WIN32]
@@ -1324,6 +1329,11 @@ $Project "vpc"
 $Project "vphysics"
 {
 	"vphysics\vphysics.vpc"  [$WIN32||$X360]
+}
+
+$Project "vphysics_bullet"
+{
+	"vphysics_bullet\vphysics_bullet.vpc"  [$WIN32||$X360]
 }
 
 $Project "vprojtomake"
