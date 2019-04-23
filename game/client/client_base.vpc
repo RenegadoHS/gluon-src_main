@@ -724,6 +724,12 @@ $Project
 		$File	"weapon_selection.h"
 		$File	"weapons_resource.h"
 		$File	"vgui_video.h"
+		$File	"VAwesomium.cpp"
+		$File	"VAwesomium.h"
+		$File	"INPanel.h"
+		$File	"ngui.cpp"
+		$File	"ngui_handler.h"
+		$File	"ngui_handler.cpp"
 	}
 
 	$Folder	"Public Header Files"
@@ -952,6 +958,34 @@ $Project
 		$File	"$SRCDIR\public\vgui_controls\WizardSubPanel.h"
 		$File	"$SRCDIR\public\worldsize.h"
 		$File	"$SRCDIR\public\zip_uncompressed.h"
+		
+		$File	"$SRCDIR\public\Awesomium\BitmapSurface.h"
+		$File	"$SRCDIR\public\Awesomium\ChildProcess.h"
+		$File	"$SRCDIR\public\Awesomium\DataPak.h"
+		$File	"$SRCDIR\public\Awesomium\DataSource.h"
+		$File	"$SRCDIR\public\Awesomium\dirlist.txt
+		$File	"$SRCDIR\public\Awesomium\JSArray.h"
+		$File	"$SRCDIR\public\Awesomium\JSObject.h"
+		$File	"$SRCDIR\public\Awesomium\JSValue.h"
+		$File	"$SRCDIR\public\Awesomium\Platform.h"
+		$File	"$SRCDIR\public\Awesomium\PrintConfig.h"
+		$File	"$SRCDIR\public\Awesomium\ResourceInterceptor.h"
+		$File	"$SRCDIR\public\Awesomium\script.bat
+		$File	"$SRCDIR\public\Awesomium\STLHelpers.h"
+		$File	"$SRCDIR\public\Awesomium\Surface.h"
+		$File	"$SRCDIR\public\Awesomium\WebConfig.h"
+		$File	"$SRCDIR\public\Awesomium\WebCore.h"
+		$File	"$SRCDIR\public\Awesomium\WebKeyboardCodes.h"
+		$File	"$SRCDIR\public\Awesomium\WebKeyboardEvent.h"
+		$File	"$SRCDIR\public\Awesomium\WebMenuItem.h"
+		$File	"$SRCDIR\public\Awesomium\WebPreferences.h"
+		$File	"$SRCDIR\public\Awesomium\WebSession.h"
+		$File	"$SRCDIR\public\Awesomium\WebString.h"
+		$File	"$SRCDIR\public\Awesomium\WebStringArray.h"
+		$File	"$SRCDIR\public\Awesomium\WebTouchEvent.h"
+		$File	"$SRCDIR\public\Awesomium\WebURL.h"
+		$File	"$SRCDIR\public\Awesomium\WebView.h"
+		$File	"$SRCDIR\public\Awesomium\WebViewListener.h"
 	}
 
 	$Folder	"Game Shared Header Files"
@@ -1101,6 +1135,7 @@ $Project
 		$File	"$SRCDIR\lib\public\tier2.lib"
 		$File	"$SRCDIR\lib\public\tier3.lib"
 		$File	"$SRCDIR\lib\public\vgui_controls.lib"
+		$File	"$SRCDIR\lib\public\awesomium.lib"
 	}
 
 	$Folder	"Link Libraries" [$X360]

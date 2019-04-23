@@ -23,6 +23,10 @@
 #include <KeyValues.h>
 #include "FileSystem.h"
 
+
+#if defined ( NGUI )
+#include "INPanel.h"
+#endif
 using namespace vgui;
 
 void MP3Player_Create( vgui::VPANEL parent );
@@ -153,6 +157,11 @@ void VGui_CreateGlobalPanels( void )
 #if defined( TRACK_BLOCKING_IO )
 	VPANEL gameDLLPanel = enginevgui->GetPanel( PANEL_GAMEDLL );
 #endif
+
+#if defined ( NGUI )
+	VPANEL gameNGUI = enginevgui->GetPanel( PANEL_GAMEUIDLL );
+	NPanel->Create( gameNGUI );
+#endif
 	// Part of game
 	internalCenterPrint->Create( gameToolParent );
 	loadingdisc->Create( gameToolParent );
@@ -178,6 +187,10 @@ void VGui_Shutdown()
 
 #ifndef _X360
 	MP3Player_Destroy();
+#endif
+
+#if defined ( NGUI )
+	NPanel->Destroy();
 #endif
 
 	netgraphpanel->Destroy();

@@ -22,7 +22,7 @@
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
-				CommandLine="if EXIST ..\..\..\game\tf\bin\$(TargetFileName) for /f &quot;delims=&quot; %%A in (&apos;attrib &quot;..\..\..\game\tf\bin\$(TargetFileName)&quot;&apos;) do set valveTmpIsReadOnly=&quot;%%A&quot;&#x0D;&#x0A;set valveTmpIsReadOnlyLetter=%valveTmpIsReadOnly:~6,1%&#x0D;&#x0A;if &quot;%valveTmpIsReadOnlyLetter%&quot;==&quot;R&quot; del /q &quot;$(TargetDir)&quot;$(TargetFileName)&#x0D;&#x0A;set path=..\..\..\game\bin;%path%&#x0D;&#x0A;if exist ..\..\devtools\bin\vpc.exe ..\..\devtools\bin\vpc.exe -crc client_tf.vpc d9e61a45 -crc ..\..\game\client\client_base.vpc bd78b7ab -crc ..\..\vpc_scripts\source_dll_win32_base.vpc f4abb8ab -crc ..\..\vpc_scripts\version.vpc 26d8e8a7 -crc ..\..\vpc_scripts\loadaddress.vpc 49fd4a9f -crc ..\..\vpc_scripts\source_dll_win32_debug.vpc 5f68c24a -crc ..\..\vpc_scripts\source_dll_win32_release.vpc 4275ffe4&#x0D;&#x0A;"
+				CommandLine="if EXIST ..\..\..\game\tf\bin\$(TargetFileName) for /f &quot;delims=&quot; %%A in (&apos;attrib &quot;..\..\..\game\tf\bin\$(TargetFileName)&quot;&apos;) do set valveTmpIsReadOnly=&quot;%%A&quot;&#x0D;&#x0A;set valveTmpIsReadOnlyLetter=%valveTmpIsReadOnly:~6,1%&#x0D;&#x0A;if &quot;%valveTmpIsReadOnlyLetter%&quot;==&quot;R&quot; del /q &quot;$(TargetDir)&quot;$(TargetFileName)&#x0D;&#x0A;set path=..\..\..\game\bin;%path%&#x0D;&#x0A;if exist ..\..\devtools\bin\vpc.exe ..\..\devtools\bin\vpc.exe -crc client_tf.vpc d9e61a45 -crc ..\..\game\client\client_base.vpc f5eda21d -crc ..\..\vpc_scripts\source_dll_win32_base.vpc f4abb8ab -crc ..\..\vpc_scripts\version.vpc 26d8e8a7 -crc ..\..\vpc_scripts\loadaddress.vpc 49fd4a9f -crc ..\..\vpc_scripts\source_dll_win32_debug.vpc 5f68c24a -crc ..\..\vpc_scripts\source_dll_win32_release.vpc 4275ffe4&#x0D;&#x0A;"
 				ExcludedFromBuild="false"
 			/>
 			<Tool
@@ -140,7 +140,7 @@
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
-				CommandLine="if EXIST ..\..\..\game\tf\bin\$(TargetFileName) for /f &quot;delims=&quot; %%A in (&apos;attrib &quot;..\..\..\game\tf\bin\$(TargetFileName)&quot;&apos;) do set valveTmpIsReadOnly=&quot;%%A&quot;&#x0D;&#x0A;set valveTmpIsReadOnlyLetter=%valveTmpIsReadOnly:~6,1%&#x0D;&#x0A;if &quot;%valveTmpIsReadOnlyLetter%&quot;==&quot;R&quot; del /q &quot;$(TargetDir)&quot;$(TargetFileName)&#x0D;&#x0A;set path=..\..\..\game\bin;%path%&#x0D;&#x0A;if exist ..\..\devtools\bin\vpc.exe ..\..\devtools\bin\vpc.exe -crc client_tf.vpc d9e61a45 -crc ..\..\game\client\client_base.vpc bd78b7ab -crc ..\..\vpc_scripts\source_dll_win32_base.vpc f4abb8ab -crc ..\..\vpc_scripts\version.vpc 26d8e8a7 -crc ..\..\vpc_scripts\loadaddress.vpc 49fd4a9f -crc ..\..\vpc_scripts\source_dll_win32_debug.vpc 5f68c24a -crc ..\..\vpc_scripts\source_dll_win32_release.vpc 4275ffe4&#x0D;&#x0A;"
+				CommandLine="if EXIST ..\..\..\game\tf\bin\$(TargetFileName) for /f &quot;delims=&quot; %%A in (&apos;attrib &quot;..\..\..\game\tf\bin\$(TargetFileName)&quot;&apos;) do set valveTmpIsReadOnly=&quot;%%A&quot;&#x0D;&#x0A;set valveTmpIsReadOnlyLetter=%valveTmpIsReadOnly:~6,1%&#x0D;&#x0A;if &quot;%valveTmpIsReadOnlyLetter%&quot;==&quot;R&quot; del /q &quot;$(TargetDir)&quot;$(TargetFileName)&#x0D;&#x0A;set path=..\..\..\game\bin;%path%&#x0D;&#x0A;if exist ..\..\devtools\bin\vpc.exe ..\..\devtools\bin\vpc.exe -crc client_tf.vpc d9e61a45 -crc ..\..\game\client\client_base.vpc f5eda21d -crc ..\..\vpc_scripts\source_dll_win32_base.vpc f4abb8ab -crc ..\..\vpc_scripts\version.vpc 26d8e8a7 -crc ..\..\vpc_scripts\loadaddress.vpc 49fd4a9f -crc ..\..\vpc_scripts\source_dll_win32_debug.vpc 5f68c24a -crc ..\..\vpc_scripts\source_dll_win32_release.vpc 4275ffe4&#x0D;&#x0A;"
 				ExcludedFromBuild="false"
 			/>
 			<Tool
@@ -3453,6 +3453,10 @@
 			Name="Link Libraries"
 			>
 			<File
+				RelativePath="..\..\lib\public\awesomium.lib"
+				>
+			</File>
+			<File
 				RelativePath="..\..\lib\public\bitmap.lib"
 				>
 			</File>
@@ -4045,6 +4049,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\INPanel.h"
+				>
+			</File>
+			<File
 				RelativePath=".\input.h"
 				>
 			</File>
@@ -4098,6 +4106,18 @@
 			</File>
 			<File
 				RelativePath=".\networkstringtable_clientdll.h"
+				>
+			</File>
+			<File
+				RelativePath=".\ngui.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\ngui_handler.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\ngui_handler.h"
 				>
 			</File>
 			<File
@@ -4249,6 +4269,14 @@
 				>
 			</File>
 			<File
+				RelativePath=".\VAwesomium.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\VAwesomium.h"
+				>
+			</File>
+			<File
 				RelativePath=".\vgui_basepanel.h"
 				>
 			</File>
@@ -4353,6 +4381,10 @@
 				>
 			</File>
 			<File
+				RelativePath="..\..\public\Awesomium\BitmapSurface.h"
+				>
+			</File>
+			<File
 				RelativePath="..\..\public\bitvec.h"
 				>
 			</File>
@@ -4398,6 +4430,10 @@
 			</File>
 			<File
 				RelativePath="..\..\public\tier1\checksum_md5.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\public\Awesomium\ChildProcess.h"
 				>
 			</File>
 			<File
@@ -4489,7 +4525,19 @@
 				>
 			</File>
 			<File
+				RelativePath="..\..\public\Awesomium\DataPak.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\public\Awesomium\DataSource.h"
+				>
+			</File>
+			<File
 				RelativePath="..\..\public\tier0\dbg.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\public\Awesomium\dirlist.txt&#x0A;  $File"
 				>
 			</File>
 			<File
@@ -4841,6 +4889,18 @@
 				>
 			</File>
 			<File
+				RelativePath="..\..\public\Awesomium\JSArray.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\public\Awesomium\JSObject.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\public\Awesomium\JSValue.h"
+				>
+			</File>
+			<File
 				RelativePath="..\..\public\vgui\KeyCode.h"
 				>
 			</File>
@@ -4949,6 +5009,10 @@
 				>
 			</File>
 			<File
+				RelativePath="..\..\public\Awesomium\Platform.h"
+				>
+			</File>
+			<File
 				RelativePath="..\..\public\tier0\platform.h"
 				>
 			</File>
@@ -4958,6 +5022,10 @@
 			</File>
 			<File
 				RelativePath="..\..\public\mathlib\polyhedron.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\public\Awesomium\PrintConfig.h"
 				>
 			</File>
 			<File
@@ -4978,6 +5046,10 @@
 			</File>
 			<File
 				RelativePath="..\..\public\tier1\rangecheckedvar.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\public\Awesomium\ResourceInterceptor.h"
 				>
 			</File>
 			<File
@@ -5006,6 +5078,10 @@
 			</File>
 			<File
 				RelativePath="..\..\public\ScratchPadUtils.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\public\Awesomium\script.bat&#x0A;  $File"
 				>
 			</File>
 			<File
@@ -5053,6 +5129,10 @@
 				>
 			</File>
 			<File
+				RelativePath="..\..\public\Awesomium\STLHelpers.h"
+				>
+			</File>
+			<File
 				RelativePath="..\..\public\string_t.h"
 				>
 			</File>
@@ -5070,6 +5150,10 @@
 			</File>
 			<File
 				RelativePath="..\..\public\studio.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\public\Awesomium\Surface.h"
 				>
 			</File>
 			<File
@@ -5210,6 +5294,58 @@
 			</File>
 			<File
 				RelativePath="..\..\public\vtf\vtf.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\public\Awesomium\WebConfig.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\public\Awesomium\WebCore.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\public\Awesomium\WebKeyboardCodes.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\public\Awesomium\WebKeyboardEvent.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\public\Awesomium\WebMenuItem.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\public\Awesomium\WebPreferences.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\public\Awesomium\WebSession.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\public\Awesomium\WebString.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\public\Awesomium\WebStringArray.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\public\Awesomium\WebTouchEvent.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\public\Awesomium\WebURL.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\public\Awesomium\WebView.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\public\Awesomium\WebViewListener.h"
 				>
 			</File>
 			<File
