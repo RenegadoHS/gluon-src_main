@@ -63,8 +63,8 @@ CNPanel::CNPanel(vgui::VPANEL parent)
 	SetSizeable( false );
 	SetMoveable( false );
 	SetVisible( true );
-	SetSize( 1600, 900 );
-
+	SetSize( ScreenWidth(), ScreenHeight() );
+	
 	SetScheme(vgui::scheme()->LoadSchemeFromFile("resource/SourceScheme.res", "SourceScheme"));
 
 	LoadControlSettings("resource/UI/NPanel.res");
@@ -75,7 +75,7 @@ CNPanel::CNPanel(vgui::VPANEL parent)
 	
 	vgui::ivgui()->AddTickSignal( GetVPanel(), 100 );
 	m_Browser = new NGUI_Browser(this, "VAwesomium");
-    m_Browser->SetSize(1600, 900);
+    m_Browser->SetSize(ScreenWidth(), ScreenHeight());
 	char path1[256];
 	Q_snprintf( path1, sizeof(path1), "file:///%s/%s/ngui/menu.html", fname, COM_GetModDirectory_NGUI());
     m_Browser->OpenURL(path1);
