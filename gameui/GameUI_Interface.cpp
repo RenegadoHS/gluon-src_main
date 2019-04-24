@@ -73,6 +73,8 @@
 // memdbgon must be the last include file in a .cpp file!!!
 #include <tier0/memdbgon.h>
 
+ConVar ngui_use("ngui_use", "0", FCVAR_CLIENTDLL, "Is NGUI used?");
+
 IGameUIFuncs *gameuifuncs = NULL;
 IEngineVGui *enginevguifuncs = NULL;
 IMatchmaking *matchmaking = NULL;
@@ -630,8 +632,14 @@ void CGameUI::AllowEngineHideGameUI()
 void CGameUI::OnGameUIActivated()
 {
 	m_bActivatedUI = true;
-
 	// hide/show the main panel to Activate all game ui
+	if(ngui_use.GetBool()){
+		engine->ClientCmd_Unrestricted("cl_ngui 1");
+		engine->ClientCmd_Unrestricted( "setpause" );
+		BasePanel()->OnGameUIHidden();
+		staticPanel->SetVisible( false );
+		return;
+	}
 	staticPanel->SetVisible( true );
 
 	// pause the server in single player
@@ -641,7 +649,6 @@ void CGameUI::OnGameUIActivated()
 	}
 
 	SetSavedThisMenuSession( false );
-
 	// notify taskbar
 	BasePanel()->OnGameUIActivated();
 }
@@ -657,6 +664,12 @@ void CGameUI::OnGameUIHidden()
 		engine->ClientCmd_Unrestricted("unpause");
 	}
 
+	if(ngui_use.GetBool()){
+		engine->ClientCmd_Unrestricted("cl_ngui 0");
+		BasePanel()->OnGameUIHidden();
+		staticPanel->SetVisible( false );
+		return;
+	}
 	BasePanel()->OnGameUIHidden();
 }
 
@@ -1122,3 +1135,16 @@ void CGameUI::SetProgressOnStart()
 {
 	m_bOpenProgressOnStart = true;
 }
+
+void resume_f ( const CCommand &args )
+{
+	if ( engine->GetMaxClients() <= 1 )
+    {
+        engine->ClientCmd_Unrestricted("unpause");
+    }
+	BasePanel()->OnGameUIHidden();
+	engine->ClientCmd_Unrestricted("cl_ngui 0");
+	staticPanel->SetVisible( false );
+}
+ 
+ConCommand resume( "resume", resume_f , "Resumes the game!", 0);

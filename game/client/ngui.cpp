@@ -8,6 +8,8 @@ using namespace vgui;
 #include "ngui_handler.h"
 #include "tier0/icommandline.h"
 
+ConVar cl_showngui("cl_ngui", "1", FCVAR_CLIENTDLL, "Sets if NGUI is visible or not (internal)");
+
 const char *COM_GetModDirectory_NGUI()
 {
 	static char modDir[MAX_PATH];
@@ -113,6 +115,7 @@ INPanel* NPanel = (INPanel*)&g_NPanel;
 void CNPanel::OnTick()
 {
 	BaseClass::OnTick();
+	SetVisible(cl_showngui.GetBool());
 }
 
 void CNPanel::OnCommand(const char* pcCommand)

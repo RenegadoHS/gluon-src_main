@@ -23,7 +23,6 @@
 #include <KeyValues.h>
 #include "FileSystem.h"
 
-
 #if defined ( NGUI )
 #include "INPanel.h"
 #endif
@@ -124,6 +123,9 @@ static void VGui_OneTimeInit()
 
 bool VGui_Startup( CreateInterfaceFn appSystemFactory )
 {
+	#if defined ( NGUI )
+		engine->ClientCmd_Unrestricted( "ngui_use 1" );
+	#endif
 	if ( !vgui::VGui_InitInterfacesList( "CLIENT", &appSystemFactory, 1 ) )
 		return false;
 
@@ -161,6 +163,7 @@ void VGui_CreateGlobalPanels( void )
 #if defined ( NGUI )
 	VPANEL gameNGUI = enginevgui->GetPanel( PANEL_GAMEUIDLL );
 	NPanel->Create( gameNGUI );
+	engine->ClientCmd_Unrestricted( "ngui_use 1" );
 #endif
 	// Part of game
 	internalCenterPrint->Create( gameToolParent );

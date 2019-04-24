@@ -246,6 +246,7 @@ void DispatchHudText( const char *pszName );
 const ConVar *hostip;
 const ConVar *hostname;
 ConVar *name;
+static ConVar map_current("map_current", "", FCVAR_USERINFO, "Map being played on");
 const ConVar *maxplayers;
 static ConVar s_CV_ShowParticleCounts("showparticlecounts", "0", 0, "Display number of particles drawn per frame");
 static ConVar s_cl_team("cl_team", "default", FCVAR_USERINFO|FCVAR_ARCHIVE, "Default team when joining a game");
@@ -868,7 +869,7 @@ int CHLClient::Init( CreateInterfaceFn appSystemFactory, CreateInterfaceFn physi
 	factories.appSystemFactory = appSystemFactory;
 	factories.physicsFactory = physicsFactory;
 	FactoryList_Store( factories );
-
+	
 	// Yes, both the client and game .dlls will try to Connect, the soundemittersystem.dll will handle this gracefully
 	if ( !soundemitterbase->Connect( appSystemFactory ) )
 	{
@@ -1422,7 +1423,7 @@ void CHLClient::LevelInitPreEntity( char const* pMapName )
 		//discordPresence.joinSecret = hostip->GetString();
 		Discord_UpdatePresence(&discordPresence);
 	}
-
+	map_current.SetValue(pMapName);
 	// Check low violence settings for this map
 	g_RagdollLVManager.SetLowViolence( pMapName );
 
@@ -1512,6 +1513,8 @@ void CHLClient::LevelShutdown( void )
 		Discord_UpdatePresence(&discordPresence);
 	}
 
+	map_current.SetValue("");
+	
 	internalCenterPrint->Clear();
 
 	messagechars->Clear();

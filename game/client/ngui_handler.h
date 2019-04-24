@@ -14,4 +14,5 @@ public:
     virtual void OnDocumentReady(Awesomium::WebView* caller, const Awesomium::WebURL& url);
 
     virtual void OnMethodCall(Awesomium::WebView* caller, unsigned int remote_object_id, const Awesomium::WebString& method_name, const Awesomium::JSArray& args);
+    virtual Awesomium::JSValue OnMethodCallWithReturnValue(Awesomium::WebView* caller, unsigned int remote_caller_id, const Awesomium::WebString& method_name, const Awesomium::JSArray& args);
 };
